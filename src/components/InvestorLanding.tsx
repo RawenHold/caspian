@@ -79,13 +79,13 @@ export function InvestorLanding() {
         <div className="relative mx-auto grid min-h-[calc(92vh-112px)] max-w-7xl content-center px-4 py-14 md:min-h-[calc(92vh-72px)] md:px-8">
           <div className="max-w-5xl">
             <p className="mb-5 inline-flex max-w-full items-center gap-2 rounded-md border border-cobalt/20 bg-white/75 px-3 py-2 text-sm font-semibold text-cobalt backdrop-blur">
-              <Sparkles size={16} /> Azerbaijan travel request layer
+              <Sparkles size={16} /> Azerbaijan concierge layer
             </p>
             <h1 className="font-display text-4xl leading-[1.04] text-ink sm:text-5xl md:text-7xl">
-              В 2024 Азербайджан принял 2.6267 млн иностранных гостей. Caspian UBook проверяет гипотезу единой заявки на поездку.
+              2.6 млн иностранных гостей приехали в Азербайджан в 2024 году. Caspian UBook собирает поездку в одну управляемую заявку.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
-              Официальная статистика подтверждает туристический поток, но не доказывает готовую выручку платформы. Поэтому MVP не обещает полную платформу: он проверяет, нужен ли рынку единый request/support layer для жилья, гидов, трансферов и локальных сервисов.
+              Жильё, гиды, трансферы, eSIM, страховка, рестораны и поддержка часто живут в разных сервисах и чатах. MVP переводит этот хаос в один маршрут: от прилёта в аэропорт Гейдар Алиев до выезда из Шеки, Губы или Нафталана.
             </p>
             <div className="mt-8 grid max-w-4xl gap-3 sm:grid-cols-3">
               {heroProof.map((item) => (
@@ -96,6 +96,9 @@ export function InvestorLanding() {
                 </div>
               ))}
             </div>
+            <p className="mt-3 max-w-4xl text-xs leading-5 text-slate-500">
+              1 000+ заявок, NPS и conversion - внутренние KPI пилота. Рыночные цифры ниже отделены от модельных показателей.
+            </p>
           </div>
         </div>
       </section>
@@ -146,7 +149,7 @@ export function InvestorLanding() {
       <section className="bg-white px-4 py-16 md:px-8">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative min-h-[520px] overflow-hidden rounded-md">
-            <Image src="/assets/flame-palace.jpg" alt="Icherisheher, Baku" fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
+            <Image src="/assets/hero-bg.png" alt="Icherisheher, Baku" fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/78 via-ink/20 to-transparent" />
             <div className="absolute bottom-0 max-w-xl p-6 text-white">
               <p className="text-sm font-semibold uppercase text-white/75">Concierge-first platform</p>
@@ -172,7 +175,7 @@ export function InvestorLanding() {
           <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
             <div className="max-w-4xl">
               <p className="text-sm font-semibold uppercase text-cobalt">Market opportunity</p>
-              <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Официальные данные показывают поток; продуктовая часть остаётся проверяемой гипотезой.</h2>
+              <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Официальные данные показывают рынок, на котором можно запускать concierge-first пилот.</h2>
             </div>
             <div className="glass-panel relative overflow-hidden p-5">
               <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-lagoon/15 blur-2xl" />
@@ -182,7 +185,7 @@ export function InvestorLanding() {
                 </span>
                 <div>
                   <p className="text-sm font-semibold uppercase text-cobalt">market signal</p>
-                  <p className="mt-2 text-lg font-semibold leading-7 text-ink">Подтверждён поток прибытия и гостиничные ночи; ценность единого маршрута должна быть доказана пилотом.</p>
+                  <p className="mt-2 text-lg font-semibold leading-7 text-ink">Подтверждены иностранные прибытия, гостиничные ночи и hotel revenue. Пилот превращает этот спрос в измеряемые заявки.</p>
                 </div>
               </div>
             </div>
@@ -217,7 +220,7 @@ export function InvestorLanding() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-cobalt">Competitive position</p>
-            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Сравнение ниже — product-positioning, а не утверждение о закрытых данных конкурентов.</h2>
+            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Caspian UBook выигрывает не каталогом, а локальным support layer между туристом и поставщиком.</h2>
           </div>
           <div className="mt-8">
             <ResponsiveTable>
@@ -246,7 +249,7 @@ export function InvestorLanding() {
             </ResponsiveTable>
           </div>
           <p className="mt-5 rounded-md border border-cobalt/15 bg-cobalt/5 p-5 leading-7 text-slate-700">
-            Глобальные и локальные сервисы закрывают части поездки. Caspian UBook не заявляет монополию: MVP проверяет, создаёт ли ценность единая заявка, локальный support и прозрачный статус между туристом и поставщиком.
+            Глобальные и локальные сервисы закрывают части поездки. Caspian UBook не заявляет монополию. Его ставка - единая заявка, локальный support и прозрачный статус между туристом и поставщиком.
           </p>
         </div>
       </section>
@@ -315,7 +318,7 @@ export function InvestorLanding() {
             <div className="grid gap-4">
               <div className="glass-panel p-6">
                 <p className="text-sm font-semibold uppercase text-cobalt">Business model</p>
-                <h2 className="mt-3 text-3xl font-semibold text-ink">Экономика пока является моделью: выручка и take rate не заявляются до пилота и договоров.</h2>
+                <h2 className="mt-3 text-3xl font-semibold text-ink">Экономика показана как pilot model: числа нужны для разговора о раунде, факт появится после 90 дней.</h2>
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
                   {revenueStreams.map((stream) => (
                     <div key={stream.title} className="rounded-md border border-slate-200 bg-white/75 p-4">
@@ -340,6 +343,8 @@ export function InvestorLanding() {
             </div>
           </div>
 
+          <p className="mt-4 text-xs leading-5 text-slate-500">¹ Модельные цифры до пилота. Реальные значения фиксируются после 90-дневного sprint.</p>
+
           <div className="mt-6">
             <ResponsiveTable>
               <thead className="bg-slate-50 text-xs uppercase tracking-wide text-slate-500">
@@ -347,7 +352,7 @@ export function InvestorLanding() {
                   <th className="px-4 py-3">Сценарий</th>
                   <th className="px-4 py-3">Заявки</th>
                   <th className="px-4 py-3">Конверсия</th>
-                  <th className="px-4 py-3">Статус выручки</th>
+                  <th className="px-4 py-3">Net revenue</th>
                 </tr>
               </thead>
               <tbody>
@@ -428,13 +433,13 @@ export function InvestorLanding() {
           <div className="glass-panel relative overflow-hidden p-6">
             <div className="absolute -bottom-16 -right-12 h-40 w-40 rounded-full bg-cobalt/10 blur-3xl" />
             <p className="text-sm font-semibold uppercase text-cobalt">Why now</p>
-            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Рынок достаточно активен для проверки локального travel layer.</h2>
+            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Сейчас совпали поток, локальные маршруты и потребность в управляемой поездке.</h2>
             <p className="mt-5 text-sm leading-6 text-slate-600">
-              Официальные данные подтверждают поток, но не подтверждают автоматически спрос на Caspian UBook — это задача пилота.
+              Азербайджан уже видит международный поток и гостиничную активность. Следующий шаг - единый цифровой слой между туристом и локальными поставщиками.
             </p>
             <div className="relative mt-6 rounded-md border border-cobalt/15 bg-white/70 p-4">
               <p className="text-xs font-semibold uppercase text-slate-500">timing thesis</p>
-              <p className="mt-2 text-2xl font-semibold text-ink">Local-first — гипотеза пилота, а не доказанный рыночный факт.</p>
+              <p className="mt-2 text-2xl font-semibold text-ink">Local-first быстрее глобального каталога там, где важны язык, доверие и ручной fallback.</p>
             </div>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">

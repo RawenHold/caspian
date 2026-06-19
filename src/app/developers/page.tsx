@@ -6,22 +6,22 @@ import { ServiceMatrix } from "@/components/ServiceMatrix";
 import { SideSectionNav } from "@/components/SideSectionNav";
 import { StageTimeline } from "@/components/StageTimeline";
 import { TopNav } from "@/components/TopNav";
-import { architectureNotes, dataEntities, dataRelations, glossary, onboardingSteps, qaStrategy, quickNav, readyChecklist, techStack } from "@/data/developer";
+import { architectureNotes, azDevContext, dataEntities, dataRelations, dataRules, glossary, onboardingSteps, qaStrategy, quickNav, readyChecklist, techStack } from "@/data/developer";
 
 const quickNavHref: Record<string, string> = {
   Backend: "#tech-stack",
   Frontend: "#tech-stack",
-  DB: "#db",
+  Database: "#db",
   DevOps: "#tech-stack",
   QA: "#qa",
   AI: "#glossary",
-  Роли: "#stages",
-  API: "#stages",
   Этапы: "#stages",
+  Глоссарий: "#glossary",
 };
 
 const developerSectionNav = [
   { href: "#developer-intro", label: "Введение в ТЗ" },
+  { href: "#az-dev-context", label: "AZ Dev Context" },
   { href: "#tech-stack", label: "Стек технологий" },
   { href: "#db", label: "Карта данных" },
   { href: "#stages", label: "Этапы реализации" },
@@ -34,6 +34,7 @@ const developerSectionNav = [
 const developerSectionActions = [
   { href: "/stages", label: "Все этапы", accent: true },
   { href: "/", label: "Для инвестора" },
+  { href: "#glossary", label: "Глоссарий" },
   { href: "https://caspian-ubook-mvp.lovable.app/app.html", label: "Дизайн-макет", external: true },
   { href: "https://t.me/USERNAME", label: "Связаться", external: true },
 ];
@@ -64,9 +65,9 @@ export default function DevelopersPage() {
             <p className="flex items-center gap-2 text-sm font-semibold uppercase text-cobalt">
               <Code2 size={16} /> Для разработчиков
             </p>
-            <h1 className="mt-4 text-4xl font-semibold leading-tight text-ink md:text-6xl">Полная техническая спецификация Caspian UBook MVP.</h1>
+            <h1 className="mt-4 text-4xl font-semibold leading-tight text-ink md:text-6xl">Техническая карта MVP: что строим, что режем и как взять первую задачу.</h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
-              Здесь находятся стек, архитектурные решения, задачи по ролям, критерии приёмки и то, что намеренно не входит в MVP. Раздел нужен, чтобы backend, frontend, DB, DevOps, QA, AI, дизайнер и PM одинаково понимали объём работ.
+              Эта страница отвечает на три вопроса: что строим и в каком порядке, что намеренно не входит в MVP, и как разработчику войти в проект без расхождения с инвесторской логикой.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {quickNav.map((item) => (
@@ -85,16 +86,37 @@ export default function DevelopersPage() {
             </div>
           </div>
 
-          <div className="glass-panel grid content-center gap-4 p-5">
+          <div className="rounded-md border border-red-200 bg-red-50/85 p-5 shadow-glass">
             <h2 className="text-2xl font-semibold text-ink">Главное правило MVP</h2>
-            <p className="leading-7 text-slate-700">
-              Сначала строим рабочие заявки, admin/support, статусы услуг и аналитику спроса. Прямые API-бронирования, онлайн-оплаты, mobile apps, Telegram bot и B2B-кабинеты включаются только после пилота, договоров и юридической готовности.
+            <p className="mt-4 leading-7 text-slate-700">
+              Сначала строим: заявки + admin/support + статусы + аналитика.
             </p>
-            <div className="grid gap-2 text-sm font-semibold text-slate-700">
-              <span className="rounded-md bg-white/75 p-3">1. Не обещать услугу как бронирование, если в MVP это только информация или assisted flow.</span>
-              <span className="rounded-md bg-white/75 p-3">2. Внешние интеграции идут через backend, а не напрямую из frontend.</span>
-              <span className="rounded-md bg-white/75 p-3">3. Каждая заявка имеет статус, владельца, историю и audit log.</span>
+            <p className="mt-3 rounded-md bg-white/80 p-3 text-sm leading-6 text-slate-700">
+              Только после пилота, договоров и legal readiness: API-бронирования, онлайн-оплаты, mobile, Telegram и B2B.
+            </p>
+            <div className="mt-4 grid gap-2 text-sm font-semibold text-slate-700">
+              <span className="rounded-md bg-white/75 p-3">1. Не называть информационную услугу бронированием.</span>
+              <span className="rounded-md bg-white/75 p-3">2. Внешние интеграции - только через backend.</span>
+              <span className="rounded-md bg-white/75 p-3">3. Каждая заявка: статус + владелец + audit log.</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="az-dev-context" className="scroll-mt-24 bg-white px-4 py-14 md:px-8">
+        <div className="mx-auto max-w-7xl">
+          <SectionTitle
+            eyebrow="AZ Dev Context"
+            title="Локальный контекст, который влияет на архитектуру."
+            text="Платежи, языки, персональные данные и партнёрская операционка в Азербайджане не должны быть спрятаны в сносках. Это ограничения MVP и входные данные для архитектуры."
+          />
+          <div className="mt-8 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+            {azDevContext.map((item) => (
+              <article key={item.title} className="glass-panel p-5">
+                <h3 className="text-xl font-semibold text-ink">{item.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -104,7 +126,7 @@ export default function DevelopersPage() {
           <SectionTitle
             eyebrow="Tech stack"
             title="Единая карта технологий для MVP."
-            text="Стек выбран под скорость запуска, прозрачную поддержку и простой найм исполнителей. До Series A продукту нужен модульный монолит, а не микросервисная инфраструктура."
+            text="Каждый пункт показывает не только стек, но и причину выбора. Это снижает риск случайных замен архитектуры по вкусу исполнителя."
           />
           <div className="mt-8 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
             {techStack.map((item) => (
@@ -112,8 +134,16 @@ export default function DevelopersPage() {
                 <p className="text-sm font-semibold uppercase text-cobalt">{item.layer}</p>
                 <h3 className="mt-2 text-xl font-semibold text-ink">{item.value}</h3>
                 <p className="mt-3 text-sm leading-6 text-slate-600">{item.note}</p>
+                <p className="mt-3 rounded-md bg-cobalt/5 p-3 text-sm leading-6 text-slate-700">
+                  <span className="font-semibold text-cobalt">Почему: </span>{item.why}
+                </p>
               </article>
             ))}
+          </div>
+          <div className="mt-6 rounded-md border border-red-200 bg-red-50 p-5">
+            <p className="text-sm font-semibold uppercase text-red-700">Платежи в MVP</p>
+            <p className="mt-2 text-lg font-semibold text-ink">Только manual payment record. Никакого auto-checkout.</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">PSP + acquirer выбираются после legal/KYB. Полный платёжный контур относится к этапу 10.</p>
           </div>
           <div className="mt-6 grid gap-3 md:grid-cols-3">
             {architectureNotes.map((item) => (
@@ -129,29 +159,32 @@ export default function DevelopersPage() {
         <div className="mx-auto max-w-7xl">
           <SectionTitle
             eyebrow="Data map"
-            title="Логическая карта данных для онбординга."
-            text="Полная схема должна жить в Prisma schema. Здесь показана бизнес-логика сущностей и связей, чтобы новый разработчик быстрее понял проект."
+            title="Логическая карта данных."
+            text="Landing не должен заменять Prisma schema. Здесь только связи, правила и доменная логика, которую нужно понимать перед задачей."
           />
-          <div className="mt-8 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="grid gap-3 md:grid-cols-2">
-              {dataEntities.map((entity) => (
-                <article key={entity.name} className="rounded-md border border-slate-200 bg-white p-4">
-                  <h3 className="flex items-center gap-2 font-semibold text-ink">
-                    <Database size={17} className="text-cobalt" /> {entity.name}
-                  </h3>
-                  <ul className="mt-3 space-y-2 text-sm leading-6 text-slate-600">
-                    {entity.fields.map((field) => (
-                      <li key={field} className="rounded-md bg-slate-50 px-3 py-2">{field}</li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
+          <div className="mt-8 grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="rounded-md border border-slate-200 bg-white p-5">
+              <div className="grid gap-3 md:grid-cols-2">
+                {dataEntities.map((entity) => (
+                  <article key={entity.name} className="rounded-md border border-slate-200 bg-slate-50 p-4">
+                    <h3 className="flex items-center gap-2 font-semibold text-ink">
+                      <Database size={17} className="text-cobalt" /> {entity.name}
+                    </h3>
+                    <p className="mt-2 text-sm leading-6 text-slate-600">{entity.role}</p>
+                  </article>
+                ))}
+              </div>
             </div>
             <aside className="glass-panel p-5">
-              <h3 className="text-xl font-semibold text-ink">Связи</h3>
+              <h3 className="text-xl font-semibold text-ink">Связи и правила</h3>
               <div className="mt-4 grid gap-2">
                 {dataRelations.map((item) => (
                   <p key={item} className="rounded-md border border-slate-200 bg-white/75 p-3 text-sm leading-6 text-slate-700">{item}</p>
+                ))}
+              </div>
+              <div className="mt-4 grid gap-2">
+                {dataRules.map((item) => (
+                  <p key={item} className="rounded-md bg-cobalt/5 p-3 text-sm leading-6 text-slate-700">{item}</p>
                 ))}
               </div>
             </aside>
@@ -188,6 +221,9 @@ export default function DevelopersPage() {
                   </div>
                 ))}
               </div>
+              <p className="mt-4 rounded-md border border-lagoon/25 bg-lagoon/5 p-4 text-sm font-semibold leading-6 text-slate-700">
+                Definition of Done: код в PR, review, тесты зелёные, staging OK, accept.
+              </p>
             </div>
             <div className="grid gap-4">
               <div className="glass-panel p-5">
@@ -221,21 +257,29 @@ export default function DevelopersPage() {
       </section>
 
       <section id="glossary" className="scroll-mt-24 bg-milk px-4 py-14 md:px-8">
-        <div className="mx-auto max-w-7xl">
-          <SectionTitle
-            eyebrow="Glossary"
-            title="Единый словарь для команды."
-            text="Термины ниже нельзя трактовать свободно: они влияют на БД, API, UI-статусы, поддержку и ожидания инвесторов."
-          />
-          <div className="mt-8 grid gap-3 md:grid-cols-2">
-            {glossary.map((item) => (
-              <article key={item.term} className="rounded-md border border-slate-200 bg-white p-4">
-                <h3 className="flex items-center gap-2 font-semibold text-ink">
-                  <TerminalSquare size={17} className="text-cobalt" /> {item.term}
-                </h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{item.definition}</p>
-              </article>
-            ))}
+        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.35fr_0.65fr]">
+          <aside className="hidden lg:block">
+            <div className="sticky top-28 rounded-md border border-cobalt/15 bg-white/85 p-5 shadow-glass">
+              <p className="text-sm font-semibold uppercase text-cobalt">Glossary</p>
+              <p className="mt-2 text-sm leading-6 text-slate-600">Термины ниже влияют на БД, API, UI-статусы, поддержку и ожидания инвесторов.</p>
+            </div>
+          </aside>
+          <div>
+            <SectionTitle
+              eyebrow="Glossary"
+              title="Единый словарь для команды."
+              text="Эти термины нельзя трактовать свободно: они влияют на модель данных, API, статусы услуг и Definition of Done."
+            />
+            <div className="mt-8 grid gap-3 md:grid-cols-2">
+              {glossary.map((item) => (
+                <article key={item.term} className="rounded-md border border-slate-200 bg-white p-4">
+                  <h3 className="flex items-center gap-2 font-semibold text-ink">
+                    <TerminalSquare size={17} className="text-cobalt" /> {item.term}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{item.definition}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -244,5 +288,3 @@ export default function DevelopersPage() {
     </main>
   );
 }
-
-

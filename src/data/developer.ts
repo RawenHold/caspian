@@ -1,35 +1,42 @@
-export const quickNav = ["Backend", "Frontend", "DB", "DevOps", "QA", "AI", "Роли", "API", "Этапы"];
+export const quickNav = ["Backend", "Frontend", "Database", "DevOps", "QA", "AI", "Этапы", "Глоссарий"];
 
 export const techStack = [
-  { layer: "Frontend", value: "Next.js 16.2.9 App Router + React 19 + TypeScript + Tailwind", note: "Соответствует текущему package.json проекта. Публичный сайт сейчас является spec-site, не production backend." },
-  { layer: "Backend", value: "NestJS + TypeScript + Prisma ORM", note: "Планируемая backend-архитектура MVP: модульный монолит с явными доменами и строгими DTO." },
-  { layer: "Database", value: "PostgreSQL primary + Redis cache/sessions", note: "Планируемая схема: PostgreSQL для бизнес-данных, Redis для сессий, OTP и короткого cache." },
-  { layer: "Auth", value: "Custom JWT/Auth.js-compatible flow + OTP", note: "Конкретные OAuth-провайдеры выбираются на этапе реализации. Нельзя обещать provider, которого нет в scope или договорённостях." },
-  { layer: "AI", value: "LLM API + RAG + human handoff", note: "Не фиксируем конкретную модель в ТЗ. Ответы должны иметь source/context или переводиться в support." },
-  { layer: "Storage", value: "S3-compatible object storage", note: "Фото, ваучеры, подтверждения партнёров и будущие документы заявок; конкретный провайдер выбирается при реализации." },
-  { layer: "Infra", value: "Docker Compose -> staging -> production host", note: "Dev-контур и staging обязательны. Railway/Render/VPS выбираются по бюджету, региону, SLA и требованиям к данным." },
-  { layer: "CI/CD", value: "GitHub Actions", note: "Lint, typecheck, tests, build, migrations и staging deploy." },
-  { layer: "Monitoring", value: "Sentry/PostHog-compatible monitoring", note: "Конкретные SaaS-инструменты выбираются при реализации; в ТЗ важны ошибки, funnel events и privacy-safe logging." },
-  { layer: "Payments MVP", value: "Manual payment record only", note: "В MVP нет обещания automatic checkout. PSP/acquirer, refunds, payouts и reconciliation добавляются только после legal/KYB." },
+  { layer: "Frontend", value: "Next.js 16.2.9 App Router + React 19 + TypeScript + Tailwind", note: "Текущий стек проекта и публичного spec-site.", why: "Не менять без причины: сайт уже собран на этом стеке, backend отделён от публичной витрины." },
+  { layer: "Backend", value: "NestJS + TypeScript + Prisma ORM", note: "Планируемый модульный монолит для MVP.", why: "Явные домены: users, requests, services, suppliers, support, content, audit, AI. Микросервисы не нужны до Series A." },
+  { layer: "Database", value: "PostgreSQL + Redis", note: "PostgreSQL для бизнес-данных и транзакций, Redis для сессий, OTP и короткого cache.", why: "Простая операционная модель, понятная миграция и быстрый onboarding разработчиков." },
+  { layer: "Auth", value: "JWT + OTP", note: "OAuth-провайдеры уточняются при реализации.", why: "Обязательно: refresh token rotation, TTL для OTP и audit log для чувствительных действий." },
+  { layer: "AI", value: "LLM API + RAG + human handoff", note: "Конкретная модель выбирается на этапе реализации.", why: "AI не отвечает без source/context. Спорные сценарии уходят в support." },
+  { layer: "Storage", value: "S3-compatible object storage", note: "Фото, ваучеры, подтверждения партнёров и документы заявок.", why: "Провайдер выбирается по цене, региону, SLA и требованиям к данным." },
+  { layer: "Infra", value: "Docker Compose -> staging -> production", note: "Dev и staging обязательны.", why: "Production только после 48 часов staging без critical bugs." },
+  { layer: "CI/CD", value: "GitHub Actions", note: "Lint, typecheck, tests, build, migrations и staging deploy.", why: "Каждая задача проходит один и тот же predictable path: PR -> review -> tests -> staging -> accept." },
+  { layer: "Monitoring", value: "Error + product analytics", note: "Sentry/PostHog-compatible monitoring без утечки персональных данных.", why: "Нужны ошибки, funnel events, support load и PMF dashboard." },
+  { layer: "Payments MVP", value: "Manual payment record only", note: "Никакого auto-checkout в MVP.", why: "PSP/acquirer, refunds, payouts и reconciliation добавляются только после legal/KYB и договоров." },
 ];
 
 export const architectureNotes = [
-  "Микросервисы не нужны до Series A: команда маленькая, MVP должен выйти быстро, а главный риск сейчас продуктовый и юридический, не инфраструктурный.",
-  "Модульный монолит даёт скорость без хаоса: users, requests, services, suppliers, support, content, audit и AI имеют отдельные границы.",
-  "Внешние интеграции проходят через backend. Frontend не общается напрямую с OTA, платёжными провайдерами, AI или поставщиками.",
+  "Модульный монолит быстрее и безопаснее для команды MVP: меньше инфраструктуры, больше контроля доменных границ.",
+  "Frontend не общается напрямую с OTA, платёжными провайдерами, AI или поставщиками. Все внешние интеграции идут через backend.",
+  "Request не равен Order: заявка может существовать без оплаты, финального подтверждения и API-брони.",
+];
+
+export const azDevContext = [
+  { title: "Платёжный контур", text: "Фазы 0-7: только manual payment record в AdminPanel. PSP, refunds, payouts и reconciliation - после договоров, legal/KYB и выбора лицензированного провайдера." },
+  { title: "Языки", text: "az для локального контекста и партнёрских шаблонов, ru для крупного source-market потока, en для международной аудитории и B2B. Все строки должны жить в locale-файлах при реализации продукта." },
+  { title: "Данные и согласия", text: "Персональные данные туристов, заявки, платежные отметки и support actions проектируются с consent, role access и audit log с первого этапа." },
+  { title: "Локальная операционка", text: "Поставщики, гиды, отели и трансферы подключаются через KYB/KYC, SLA, правила отмены и ручной escalation. Supplier становится Partner только после проверки." },
 ];
 
 export const dataEntities = [
-  { name: "User", fields: ["id UUID required", "email string optional", "phone string optional", "role enum required", "createdAt date"] },
-  { name: "UserProfile", fields: ["userId UUID required", "fullName string", "language enum", "country string", "preferences json"] },
-  { name: "AuthIdentity", fields: ["userId UUID required", "provider enum", "providerId string", "verifiedAt date"] },
-  { name: "Request", fields: ["id UUID required", "userId UUID required", "serviceId UUID required", "status enum", "payload json"] },
-  { name: "Order", fields: ["id UUID required", "requestId UUID required", "amount decimal", "currency AZN/USD", "paymentStatus enum"] },
-  { name: "Service", fields: ["id UUID required", "type enum", "title string", "mvpStatus enum", "phase number"] },
-  { name: "Supplier", fields: ["id UUID required", "type enum", "legalName string", "contact json", "verificationStatus enum"] },
-  { name: "AuditLog", fields: ["id UUID required", "actorId UUID", "entityType string", "entityId UUID", "diff json"] },
-  { name: "SupportCase", fields: ["id UUID required", "requestId UUID optional", "userId UUID", "priority enum", "status enum"] },
-  { name: "ContentPage", fields: ["id UUID required", "slug string", "locale az/ru/en", "status enum", "seo json"] },
+  { name: "User", role: "аккаунт туриста или оператора" },
+  { name: "UserProfile", role: "язык, страна, предпочтения" },
+  { name: "AuthIdentity", role: "OTP/OAuth identity и verification" },
+  { name: "Request", role: "заявка на услугу или маршрут" },
+  { name: "Order", role: "подтверждённая коммерческая операция" },
+  { name: "Service", role: "тип услуги и MVP status" },
+  { name: "Supplier", role: "поставщик до статуса партнёра" },
+  { name: "SupportCase", role: "ручной handoff и escalation" },
+  { name: "AuditLog", role: "обязательная история действий" },
+  { name: "ContentPage", role: "публичные страницы и RAG-база AI" },
 ];
 
 export const dataRelations = [
@@ -38,16 +45,23 @@ export const dataRelations = [
   "Request -> Service -> Supplier",
   "Request -> SupportCase",
   "Любая смена статуса -> AuditLog",
-  "ContentPage питает публичные страницы и RAG-базу AI.",
+  "ContentPage -> публичные страницы + RAG-база AI",
+];
+
+export const dataRules = [
+  "Request != Order. Заявка может существовать без оплаты.",
+  "Supplier != Partner. Partner - только после договора, KYB/KYC и SLA.",
+  "Каждый статус-переход логируется в AuditLog.",
+  "Полная Prisma schema должна жить в /prisma/schema.prisma, а не на landing page.",
 ];
 
 export const onboardingSteps = [
-  "Прочитать README, .env.example, текущий этап и правила MVP scope.",
-  "Поднять проект через Docker Compose: frontend, backend, PostgreSQL, Redis.",
-  "Запустить миграции Prisma и seed: роли, категории услуг, тестовый admin.",
-  "Проверить health endpoints и локальный login/register flow.",
-  "Пройти сценарий: регистрация -> заявка -> admin -> смена статуса -> audit log.",
-  "Взять задачу только после понимания acceptance criteria и границы: что не входит в этап.",
+  "Прочитай README и текущий этап в /stages. Пойми, что не входит в MVP.",
+  "Подними стек: docker-compose up -> frontend + backend + PostgreSQL + Redis.",
+  "Запусти миграции и seed: npx prisma migrate dev -> роли, категории, тестовый admin.",
+  "Проверь health endpoints и login flow: email + OTP.",
+  "Пройди полный сценарий: регистрация -> заявка -> admin -> статус -> audit log.",
+  "Возьми задачу только если понимаешь acceptance criteria и что не входит в этап.",
 ];
 
 export const readyChecklist = [
@@ -74,8 +88,10 @@ export const glossary = [
   { term: "Support case", definition: "Обращение в поддержку. Может быть связано с Request, но не всегда." },
   { term: "Supplier", definition: "Конкретный поставщик услуги: отель, гид, трансфер, страховой или eSIM-провайдер." },
   { term: "Partner", definition: "Supplier с договорённостью, условиями, SLA и проверенным контактом. Без этого партнёром его не называем." },
+  { term: "MVP Status", definition: "Статус услуги в карте MVP: Работает в MVP, Support / ссылка, Информация сейчас или После MVP. Нельзя менять без согласования с PM." },
+  { term: "Audit Log", definition: "Обязательная запись каждого изменения статуса, права доступа или действия support-агента. Без Audit Log задача не считается выполненной." },
   { term: "Deep link", definition: "Переход во внешний сервис без прямого обмена данными через API." },
   { term: "API integration", definition: "Прямой обмен данными с внешним сервисом: доступность, бронь, оплата, статус. Требует legal/API confirmation." },
   { term: "Assisted flow", definition: "Платформа помогает через заявку или support, но не завершает транзакцию автоматически." },
-  { term: "PMF", definition: "Для Caspian UBook это внутренние KPI пилота: заявки, NPS, conversion, проверенные партнёры и повторные заявки. Это не рыночные факты." },
+  { term: "PMF", definition: "Для Caspian UBook это внутренние KPI пилота: заявки, NPS, conversion, проверенные партнёры и повторные заявки." },
 ];

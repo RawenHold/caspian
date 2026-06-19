@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "Azerbaijan travel concierge platform: MVP roadmap, investor memo and developer specification.",
     url: "/",
     siteName: "Caspian UBook",
-    images: ["/assets/flame-palace.jpg"],
+    images: ["/assets/hero-bg.png"],
     locale: "ru_RU",
     type: "website",
   },

@@ -18,4 +18,4 @@ npm run build
 - Market figures shown on the site are restricted to official/public sources; pilot KPIs are labelled as internal targets, not market facts.
 - This is a spec-site only, not the real backend/admin MVP.
 - `public/assets/caspian-ubook-presentation.pdf` is a placeholder deck and should be replaced before public launch.
-- Hero image: user-provided project asset (`public/assets/hero-bg.png`). Baku photo used in content sections: Wikimedia Commons, AlixSaz, CC BY-SA 4.0.
+- Hero and content visuals use the user-provided high-resolution project asset (`public/assets/hero-bg.png`).
