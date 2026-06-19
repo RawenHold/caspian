@@ -79,13 +79,13 @@ export function InvestorLanding() {
         <div className="relative mx-auto grid min-h-[calc(92vh-112px)] max-w-7xl content-center px-4 py-14 md:min-h-[calc(92vh-72px)] md:px-8">
           <div className="max-w-5xl">
             <p className="mb-5 inline-flex max-w-full items-center gap-2 rounded-md border border-cobalt/20 bg-white/75 px-3 py-2 text-sm font-semibold text-cobalt backdrop-blur">
-              <Sparkles size={16} /> Azerbaijan concierge layer
+              <Sparkles size={16} /> Caucasus travel concierge layer
             </p>
             <h1 className="font-display text-4xl leading-[1.04] text-ink sm:text-5xl md:text-7xl">
-              2.6 млн иностранных гостей приехали в Азербайджан в 2024 году. Caspian UBook собирает поездку в одну управляемую заявку.
+              2.6 миллиона туристов приехали в Азербайджан в 2024 году. Поездку каждый из них собирал вручную.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
-              Жильё, гиды, трансферы, eSIM, страховка, рестораны и поддержка часто живут в разных сервисах и чатах. MVP переводит этот хаос в один маршрут: от прилёта в аэропорт Гейдар Алиев до выезда из Шеки, Губы или Нафталана.
+              Жильё в Booking, гид в Telegram, трансфер через знакомых, оплата наличными, поддержка - нигде. Caspian UBook объединяет всё это в одну заявку - от прилёта в аэропорт Гейдар Алиев до отъезда из Шеки.
             </p>
             <div className="mt-8 grid max-w-4xl gap-3 sm:grid-cols-3">
               {heroProof.map((item) => (
