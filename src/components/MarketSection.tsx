@@ -19,7 +19,7 @@ export function MarketSection() {
       <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[1fr_1.1fr]">
         <div className="relative min-h-[420px] overflow-hidden rounded-md">
           <Image src="/assets/flame-palace.jpg" alt="Icherisheher, Baku" fill className="object-cover" sizes="(min-width: 1024px) 45vw, 100vw" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />
           <div className="absolute bottom-0 p-6 text-white">
             <p className="text-sm font-semibold uppercase text-white/80">Tourism platform thesis</p>
             <h3 className="mt-2 text-3xl font-semibold">Azerbaijan needs a concierge layer between discovery and booking.</h3>

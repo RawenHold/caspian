@@ -74,7 +74,7 @@ export function InvestorLanding() {
 
       <section id="top" className="relative min-h-[92vh] overflow-hidden pt-[112px] md:pt-[72px]">
         <div className="absolute inset-0 bg-[url('/assets/hero-bg.png')] bg-cover bg-center" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/88 to-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/92 to-white/30" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-milk to-transparent" />
         <div className="relative mx-auto grid min-h-[calc(92vh-112px)] max-w-7xl content-center px-4 py-14 md:min-h-[calc(92vh-72px)] md:px-8">
           <div className="max-w-5xl">
@@ -147,7 +147,7 @@ export function InvestorLanding() {
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative min-h-[520px] overflow-hidden rounded-md">
             <Image src="/assets/flame-palace.jpg" alt="Icherisheher, Baku" fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/78 via-black/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/78 via-ink/20 to-transparent" />
             <div className="absolute bottom-0 max-w-xl p-6 text-white">
               <p className="text-sm font-semibold uppercase text-white/75">Concierge-first platform</p>
               <h2 className="mt-3 text-3xl font-semibold leading-tight md:text-4xl">Один интерфейс переводит хаос поездки в управляемую заявку.</h2>

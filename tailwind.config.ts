@@ -5,16 +5,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#f5f5f5",
-        cobalt: "#e8c96d",
-        lagoon: "#35d0c2",
-        gold: "#e8c96d",
-        sand: "#151515",
-        milk: "#0a0a0a",
+        ink: "#0f1b2d",
+        cobalt: "#2514c9",
+        lagoon: "#17b9c1",
+        gold: "#d5a246",
+        sand: "#f3efe6",
+        milk: "#fbfbf7",
       },
       boxShadow: {
-        glass: "0 18px 70px rgba(0, 0, 0, 0.35)",
-        lift: "0 24px 80px rgba(232, 201, 109, 0.18)",
+        glass: "0 18px 70px rgba(31, 20, 150, 0.13)",
+        lift: "0 24px 80px rgba(14, 35, 72, 0.16)",
       },
     },
   },
