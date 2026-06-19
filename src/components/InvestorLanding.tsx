@@ -99,10 +99,10 @@ export function InvestorLanding() {
               <Sparkles size={16} /> Caucasus travel concierge layer
             </p>
             <h1 className="font-display text-4xl leading-[1.04] text-ink sm:text-5xl md:text-7xl">
-              2.6 миллиона туристов приехали в Азербайджан в 2024 году. Поездку каждый из них собирал вручную.
+              871,7 тыс. иностранцев приехали в Азербайджан за январь-май 2026. Поездку каждый всё ещё собирает вручную.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
-              Жильё в Booking, гид в Telegram, трансфер через знакомых, оплата наличными, поддержка - нигде. Caspian UBook объединяет всё это в одну заявку - от прилёта в аэропорт Гейдар Алиев до отъезда из Шеки.
+              Госкомстат фиксирует свежий поток из 186 стран: январь-май 2026 ниже января-мая 2025 на 11,0%, но это всё ещё сотни тысяч поездок без единого concierge flow. Жильё в Booking, гид в Telegram, трансфер через знакомых, оплата наличными, поддержка - нигде. Caspian UBook объединяет всё это в одну заявку.
             </p>
             <div className="mt-8 grid max-w-4xl gap-3 sm:grid-cols-3">
               {heroProof.map((item) => (
