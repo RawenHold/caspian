@@ -3,7 +3,7 @@ import { ArrowRight, Compass, ShieldCheck } from "lucide-react";
 export function Hero() {
   return (
     <section id="top" className="relative min-h-[92vh] overflow-hidden pt-16">
-      <div className="absolute inset-0 bg-[url('/assets/hero-bg.jpg')] bg-cover bg-center" />
+      <div className="absolute inset-0 bg-[url('/assets/hero-bg.png')] bg-cover bg-center" />
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/88 to-black/36" />
       <div className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-milk to-transparent" />
       <div className="relative mx-auto grid min-h-[calc(92vh-4rem)] max-w-7xl content-center px-4 py-20 md:px-8">

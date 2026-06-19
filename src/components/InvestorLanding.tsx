@@ -73,7 +73,7 @@ export function InvestorLanding() {
       />
 
       <section id="top" className="relative min-h-[92vh] overflow-hidden pt-[112px] md:pt-[72px]">
-        <div className="absolute inset-0 bg-[url('/assets/hero-bg.jpg')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[url('/assets/hero-bg.png')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/88 to-black/40" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-milk to-transparent" />
         <div className="relative mx-auto grid min-h-[calc(92vh-112px)] max-w-7xl content-center px-4 py-14 md:min-h-[calc(92vh-72px)] md:px-8">
