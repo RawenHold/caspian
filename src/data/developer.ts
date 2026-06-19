@@ -20,10 +20,11 @@ export const architectureNotes = [
 ];
 
 export const azDevContext = [
-  { title: "Платёжный контур", text: "Фазы 0-7: только manual payment record в AdminPanel. Phase 10 shortlist: Epoint, Kapital Bank, PASHA Bank/acquirer route, MilliKart, Portmanat, m10/Birbank, Apple Pay/Google Pay через поддерживаемого провайдера - только после provider verification, договоров и legal/KYB." },
-  { title: "Языки", text: "az для локального контекста и партнёрских шаблонов, ru для крупного source-market потока, en для международной аудитории и B2B. Все строки должны жить в locale-файлах при реализации продукта." },
-  { title: "Данные и согласия", text: "Персональные данные туристов, заявки, платежные отметки и support actions проектируются с consent, role access и audit log с первого этапа." },
-  { title: "Локальная операционка", text: "Поставщики, гиды, отели и трансферы подключаются через KYB/KYC, SLA, правила отмены и ручной escalation. Technopark/tax status и startup incentives учитываются только после legal review." },
+  { title: "Платёжный контур", value: "Phase 10", text: "Фазы 0-7: только manual payment record. Shortlist: Epoint, Kapital Bank, PASHA/acquirer route, MilliKart, Portmanat, m10/Birbank, Apple Pay/Google Pay - после provider verification, договоров и legal/KYB." },
+  { title: "Языки", value: "az / ru / en", text: "az для локального UI и партнёрских шаблонов, ru для крупного source-market потока, en для международной аудитории и B2B. Реализация через locale-файлы." },
+  { title: "Юридическое и налоговое", value: "legal review", text: "Technopark/tax status, персональные данные и согласия туристов учитываются только после legal review. Audit log обязателен для access/status/support actions." },
+  { title: "Local dev ecosystem", value: "Baku", text: "Hiring/context из промпта: Technopark Baku, ADA University, BHOS, SABAH.city, InMerge Innovation Summit, Baku ID. Зарплатные вилки - model input." },
+  { title: "Операционка партнёров", value: "KYB/KYC", text: "Поставщики, гиды, отели и трансферы подключаются через SLA, правила отмены и ручной escalation. Supplier становится Partner только после проверки." },
 ];
 
 export const dataEntities = [

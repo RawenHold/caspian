@@ -26,11 +26,11 @@ export const painPoints = [
 ];
 
 export const competitorRows = [
-  { label: "Один маршрут поездки", caspian: "✓", booking: "-", getYourGuide: "-", yandex: "частично", agencies: "вручную" },
-  { label: "Локальный support layer", caspian: "✓", booking: "-", getYourGuide: "-", yandex: "частично", agencies: "✓" },
-  { label: "Жильё + гиды + трансферы", caspian: "✓", booking: "жильё", getYourGuide: "активности", yandex: "частично", agencies: "пакеты" },
-  { label: "Прозрачный статус заявки", caspian: "✓", booking: "внутри жилья", getYourGuide: "внутри тура", yandex: "внутри сервиса", agencies: "менеджер" },
-  { label: "Онлайн-оплата в MVP", caspian: "после pilot/legal", booking: "✓", getYourGuide: "✓", yandex: "✓", agencies: "часто offline" },
+  { label: "Локальный контекст", caspian: "Высокий", booking: "Низкий", getYourGuide: "Средний", yandex: "Средний", agencies: "Высокий" },
+  { label: "AI-консьерж Az/Ru/En", caspian: "Да", booking: "Нет", getYourGuide: "Нет", yandex: "Ограниченно", agencies: "Нет" },
+  { label: "Caucasus-first", caspian: "Да", booking: "Нет", getYourGuide: "Нет", yandex: "Нет", agencies: "Частично" },
+  { label: "End-to-end поездка", caspian: "Да", booking: "Нет", getYourGuide: "Частично", yandex: "Частично", agencies: "Вручную" },
+  { label: "Партнёрская модель", caspian: "Да", booking: "Ограниченно", getYourGuide: "Да", yandex: "Ограниченно", agencies: "Офлайн" },
 ];
 
 export const solutionPillars = [
@@ -49,10 +49,18 @@ export const solutionPillars = [
 ];
 
 export const marketTimeline = [
+  { year: "2020", value: "0.8M", text: "нижняя точка пандемии в investor timeline; используется как historical context" },
+  { year: "2023", value: "2.1M", text: "этап восстановления туристического потока перед ростом 2024" },
   { year: "2024 official", value: "2.6267M", text: "иностранцы и лица без гражданства, прибывшие в Азербайджан; +25,9% к 2023" },
-  { year: "2024 hotels", value: "694.2M AZN", text: "выручка hotels and similar establishments; +42,0% к 2023" },
   { year: "2026 model", value: "3.5M", text: "deck model для launch-window planning; не официальный прогноз" },
   { year: "2030 target", value: "6.0M", text: "target scenario для инвесторской модели; публично только со ссылкой на программу" },
+];
+
+export const marketContextCards = [
+  { label: "WTTC 2025", value: "₼10.3B", text: "tourism GDP contribution context from prompt: 8.2% of GDP, +32% YoY; verify source before final public deck." },
+  { label: "Digital payments", value: "91%", text: "prompt input for electronic payments share; used as payment-readiness narrative pending final source check." },
+  { label: "Global visibility", value: "COP29 + F1", text: "Baku events create visibility context; no quantified uplift is promised." },
+  { label: "Travel narratives", value: "Karabakh · Naftalan · Sheki", text: "Karabakh, Naftalan SPA and Sheki UNESCO create differentiated Azerbaijan routes for content and pilot demand." },
 ];
 
 export const customerSegments = [
@@ -114,7 +122,8 @@ export const whyNow = [
   "2.6267M иностранных прибытий в 2024 (+25,9%) - подтверждённый baseline для старта пилота.",
   "Поток диверсифицирован: Россия, Türkiye, Индия, Иран, страны Залива, Казахстан, Пакистан, Китай и Израиль видны в официальной статистике.",
   "Баку концентрирует 60,9% гостиничных ночей, но Гусар, Нафталан, Габала и Губа уже заметны в гостиничной статистике.",
-  "COP29 прошёл в Баку в ноябре 2024: это подтверждённый глобальный event-сигнал, который можно использовать как visibility context без обещания прямого tourism uplift.",
+  "COP29 и Formula 1 усиливают глобальную видимость Баку; используем это как event-context, без обещания прямого tourism uplift.",
+  "Карабах, Нафталан и Шеки дают три сильных маршрута: heritage, health и UNESCO narrative без единой цифровой точки входа.",
+  "91% electronic payments, Technopark режим и startup ecosystem growth добавляют infrastructure upside после source/legal verification.",
   "ATB ведёт статистику, исследования, business events и certified guides/hotels; рынок даёт достаточно данных, чтобы строить local-first travel layer сейчас.",
-  "Technopark/innovation ecosystem, локальные PSP и mobile wallets добавляют инфраструктурный upside, но каждое преимущество проходит legal/provider verification.",
 ];

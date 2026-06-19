@@ -110,10 +110,11 @@ export default function DevelopersPage() {
             title="Локальный контекст, который влияет на архитектуру."
             text="Платежи, языки, персональные данные и партнёрская операционка в Азербайджане не должны быть спрятаны в сносках. Это ограничения MVP и входные данные для архитектуры."
           />
-          <div className="mt-8 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-8 grid gap-3 md:grid-cols-2 xl:grid-cols-5">
             {azDevContext.map((item) => (
-              <article key={item.title} className="glass-panel p-5">
-                <h3 className="text-xl font-semibold text-ink">{item.title}</h3>
+              <article key={item.title} className="signal-card p-5">
+                <p className="text-xs font-semibold uppercase text-cobalt">{item.value}</p>
+                <h3 className="mt-2 text-xl font-semibold text-ink">{item.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
               </article>
             ))}

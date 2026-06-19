@@ -22,6 +22,7 @@ import {
   heroProof,
   investorRisks,
   investorRoadmap,
+  marketContextCards,
   marketTimeline,
   painPoints,
   problemJourney,
@@ -56,10 +57,26 @@ const investorSectionActions = [
 
 function ResponsiveTable({ children }: { children: ReactNode }) {
   return (
-    <div className="overflow-x-auto rounded-md border border-slate-200 bg-white">
+    <div className="overflow-x-auto rounded-md border border-slate-200 bg-white shadow-[0_18px_55px_rgba(34,48,89,0.08)]">
       <table className="min-w-[760px] w-full border-collapse text-left text-sm">{children}</table>
     </div>
   );
+}
+
+function PositionCell({ value, highlight = false }: { value: string; highlight?: boolean }) {
+  const normalized = value.toLowerCase();
+  const isStrong = ["✓", "да", "высокий"].includes(normalized);
+  const isWeak = ["-", "нет", "низкий"].includes(normalized);
+  const isPartial = normalized.includes("част") || normalized.includes("сред") || normalized.includes("огранич");
+  const tone = highlight || isStrong
+    ? "border-lagoon/35 bg-lagoon/10 text-cobalt"
+    : isWeak
+      ? "border-slate-200 bg-slate-50 text-slate-500"
+      : isPartial
+        ? "border-gold/40 bg-gold/10 text-ink"
+        : "border-slate-200 bg-white text-slate-700";
+
+  return <span className={"inline-flex min-w-20 justify-center rounded-md border px-2.5 py-1 text-xs font-semibold " + tone}>{value}</span>;
 }
 
 export function InvestorLanding() {
@@ -89,7 +106,7 @@ export function InvestorLanding() {
             </p>
             <div className="mt-8 grid max-w-4xl gap-3 sm:grid-cols-3">
               {heroProof.map((item) => (
-                <div key={item.label} className="glass-panel p-4">
+                <div key={item.label} className="signal-card p-4">
                   <p className="text-xs font-semibold uppercase text-slate-500">{item.label}</p>
                   <p className="mt-2 text-3xl font-semibold text-ink">{item.value}</p>
                   <p className="mt-2 text-sm leading-5 text-slate-600">{item.text}</p>
@@ -193,7 +210,7 @@ export function InvestorLanding() {
 
           <div className="mt-8 grid gap-3 md:grid-cols-4">
             {marketTimeline.map((item, index) => (
-              <div key={item.year} className="metric-card glass-panel p-5" style={{ animationDelay: `${index * 70}ms` }}>
+              <div key={item.year} className="metric-card signal-card p-5" style={{ animationDelay: `${index * 70}ms` }}>
                 <div className="flex items-center justify-between gap-3">
                   <p className="text-sm font-semibold text-cobalt">{item.year}</p>
                   <span className="h-2 w-2 rounded-full bg-lagoon shadow-[0_0_18px_rgba(23,185,193,0.75)]" />
@@ -204,13 +221,23 @@ export function InvestorLanding() {
             ))}
           </div>
 
-          <div className="mt-6 grid gap-3 md:grid-cols-4">
+          <div className="mt-6 grid gap-3 md:grid-cols-3 xl:grid-cols-6">
             {deckMetrics.map((metric, index) => (
-              <div key={metric.label} className="feature-card rounded-md border border-slate-200 bg-white p-5 transition hover:-translate-y-1 hover:border-cobalt/25 hover:shadow-glass" style={{ animationDelay: `${index * 60}ms` }}>
+              <div key={metric.label} className="feature-card signal-card p-5" style={{ animationDelay: `${index * 60}ms` }}>
                 <p className="text-3xl font-semibold text-ink md:text-4xl">{metric.value}</p>
                 <p className="mt-2 font-semibold text-slate-700">{metric.label}</p>
                 <p className="mt-3 text-xs leading-5 text-slate-500">{metric.note}</p>
               </div>
+            ))}
+          </div>
+
+          <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+            {marketContextCards.map((item) => (
+              <article key={item.label} className="rounded-md border border-cobalt/15 bg-white/85 p-5 shadow-[0_18px_55px_rgba(34,48,89,0.08)]">
+                <p className="text-xs font-semibold uppercase text-cobalt">{item.label}</p>
+                <p className="mt-2 text-2xl font-semibold text-ink">{item.value}</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">{item.text}</p>
+              </article>
             ))}
           </div>
         </div>
@@ -238,18 +265,18 @@ export function InvestorLanding() {
                 {competitorRows.map((row) => (
                   <tr key={row.label} className="border-t border-slate-100">
                     <td className="px-4 py-4 font-semibold text-ink">{row.label}</td>
-                    <td className="px-4 py-4 font-semibold text-cobalt">{row.caspian}</td>
-                    <td className="px-4 py-4 text-slate-700">{row.booking}</td>
-                    <td className="px-4 py-4 text-slate-700">{row.getYourGuide}</td>
-                    <td className="px-4 py-4 text-slate-700">{row.yandex}</td>
-                    <td className="px-4 py-4 text-slate-700">{row.agencies}</td>
+                    <td className="px-4 py-4"><PositionCell value={row.caspian} highlight /></td>
+                    <td className="px-4 py-4"><PositionCell value={row.booking} /></td>
+                    <td className="px-4 py-4"><PositionCell value={row.getYourGuide} /></td>
+                    <td className="px-4 py-4"><PositionCell value={row.yandex} /></td>
+                    <td className="px-4 py-4"><PositionCell value={row.agencies} /></td>
                   </tr>
                 ))}
               </tbody>
             </ResponsiveTable>
           </div>
           <p className="mt-5 rounded-md border border-cobalt/15 bg-cobalt/5 p-5 leading-7 text-slate-700">
-            Глобальные и локальные сервисы закрывают части поездки. Caspian UBook не заявляет монополию. Его ставка - единая заявка, локальный support и прозрачный статус между туристом и поставщиком.
+            Глобальные OTA начинают с каталога. Caspian UBook начинает с локального контекста на трёх языках, партнёрского процесса и поддержки - поэтому может стать операционным слоем поездки, а не ещё одной витриной. Локальные агентства работают сильнее в офлайне, но именно это оставляет место для управляемого digital flow.
           </p>
         </div>
       </section>
@@ -321,7 +348,7 @@ export function InvestorLanding() {
                 <h2 className="mt-3 text-3xl font-semibold text-ink">Экономика показана как pilot model: числа нужны для разговора о раунде, факт появится после 90 дней.</h2>
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
                   {revenueStreams.map((stream) => (
-                    <div key={stream.title} className="rounded-md border border-slate-200 bg-white/75 p-4">
+                    <div key={stream.title} className="signal-card p-4">
                       <div className="flex items-center justify-between gap-3">
                         <h3 className="font-semibold text-ink">{stream.title}</h3>
                         <span className="text-2xl font-semibold text-cobalt">{stream.value}</span>
@@ -333,7 +360,7 @@ export function InvestorLanding() {
               </div>
               <div className="grid gap-3 md:grid-cols-4">
                 {unitEconomics.map((item) => (
-                  <div key={item.label} className="rounded-md border border-slate-200 bg-white p-4">
+                  <div key={item.label} className="signal-card p-4">
                     <p className="text-2xl font-semibold text-ink">{item.value}</p>
                     <p className="mt-2 text-sm font-semibold text-slate-700">{item.label}</p>
                     <p className="mt-2 text-xs leading-5 text-slate-500">{item.note}</p>
@@ -444,7 +471,7 @@ export function InvestorLanding() {
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {whyNow.map((item, index) => (
-              <div key={item} className="feature-card group rounded-md border border-slate-200 bg-white/85 p-5 text-sm leading-6 text-slate-700 transition hover:-translate-y-1 hover:border-cobalt/25 hover:shadow-glass" style={{ animationDelay: `${index * 70}ms` }}>
+              <div key={item} className="feature-card signal-card p-5 text-sm leading-6 text-slate-700" style={{ animationDelay: `${index * 70}ms` }}>
                 <div className="mb-4 flex items-center justify-between gap-3">
                   <span className="flex h-9 w-9 items-center justify-center rounded-full bg-cobalt text-xs font-semibold text-white">0{index + 1}</span>
                   <span className="h-px flex-1 bg-gradient-to-r from-cobalt/20 to-transparent" />
