@@ -79,13 +79,13 @@ export function InvestorLanding() {
         <div className="relative mx-auto grid min-h-[calc(92vh-112px)] max-w-7xl content-center px-4 py-14 md:min-h-[calc(92vh-72px)] md:px-8">
           <div className="max-w-5xl">
             <p className="mb-5 inline-flex max-w-full items-center gap-2 rounded-md border border-cobalt/20 bg-white/75 px-3 py-2 text-sm font-semibold text-cobalt backdrop-blur">
-              <Sparkles size={16} /> Caucasus travel concierge layer
+              <Sparkles size={16} /> Azerbaijan travel request layer
             </p>
             <h1 className="font-display text-4xl leading-[1.04] text-ink sm:text-5xl md:text-7xl">
-              Миллионы туристов уже едут в Азербайджан. Но поездку всё ещё собирают вручную.
+              В 2024 Азербайджан принял 2.6267 млн иностранных гостей. Caspian UBook проверяет гипотезу единой заявки на поездку.
             </h1>
             <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
-              Жильё, гиды, трансферы, оплата, язык и поддержка живут в разных сервисах и чатах. Caspian UBook объединяет их в один мультиинструмент с AI-консьержем и понятным маршрутом от прилёта до отъезда гостя.
+              Официальная статистика подтверждает туристический поток, но не доказывает готовую выручку платформы. Поэтому MVP не обещает полную платформу: он проверяет, нужен ли рынку единый request/support layer для жилья, гидов, трансферов и локальных сервисов.
             </p>
             <div className="mt-8 grid max-w-4xl gap-3 sm:grid-cols-3">
               {heroProof.map((item) => (
@@ -172,7 +172,7 @@ export function InvestorLanding() {
           <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
             <div className="max-w-4xl">
               <p className="text-sm font-semibold uppercase text-cobalt">Market opportunity</p>
-              <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Окно входа открыто: спрос растёт быстрее, чем локальная цифровая инфраструктура.</h2>
+              <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Официальные данные показывают поток; продуктовая часть остаётся проверяемой гипотезой.</h2>
             </div>
             <div className="glass-panel relative overflow-hidden p-5">
               <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-lagoon/15 blur-2xl" />
@@ -182,7 +182,7 @@ export function InvestorLanding() {
                 </span>
                 <div>
                   <p className="text-sm font-semibold uppercase text-cobalt">market signal</p>
-                  <p className="mt-2 text-lg font-semibold leading-7 text-ink">Спрос уже сформирован, но единый цифровой маршрут ещё не стал стандартом рынка.</p>
+                  <p className="mt-2 text-lg font-semibold leading-7 text-ink">Подтверждён поток прибытия и гостиничные ночи; ценность единого маршрута должна быть доказана пилотом.</p>
                 </div>
               </div>
             </div>
@@ -217,7 +217,7 @@ export function InvestorLanding() {
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-cobalt">Competitive position</p>
-            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Никто из текущих игроков не строит этот рынок снизу вверх.</h2>
+            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Сравнение ниже — product-positioning, а не утверждение о закрытых данных конкурентов.</h2>
           </div>
           <div className="mt-8">
             <ResponsiveTable>
@@ -227,7 +227,7 @@ export function InvestorLanding() {
                   <th className="px-4 py-3 text-cobalt">Caspian UBook</th>
                   <th className="px-4 py-3">Booking</th>
                   <th className="px-4 py-3">GetYourGuide</th>
-                  <th className="px-4 py-3">Yandex Travel</th>
+                  <th className="px-4 py-3">Regional OTA</th>
                   <th className="px-4 py-3">Local agencies</th>
                 </tr>
               </thead>
@@ -246,7 +246,7 @@ export function InvestorLanding() {
             </ResponsiveTable>
           </div>
           <p className="mt-5 rounded-md border border-cobalt/15 bg-cobalt/5 p-5 leading-7 text-slate-700">
-            Глобальные OTA начинают с каталога. Caspian UBook начинает с локального контекста, партнёрского процесса и поддержки, поэтому может стать операционным слоем поездки, а не ещё одной витриной.
+            Глобальные и локальные сервисы закрывают части поездки. Caspian UBook не заявляет монополию: MVP проверяет, создаёт ли ценность единая заявка, локальный support и прозрачный статус между туристом и поставщиком.
           </p>
         </div>
       </section>
@@ -295,7 +295,7 @@ export function InvestorLanding() {
                 </div>
               </div>
               <p className="mt-5 leading-7 text-slate-700">
-                Раунд финансирует MVP, пилот, партнёрскую сеть, первые продажи и проверку unit economics. Деньги не тратятся на преждевременный запуск всех SuperApp-функций.
+                Раунд финансирует MVP, пилот, партнёрскую сеть, первые продажи и проверку unit economics. Деньги не тратятся на преждевременный запуск всех платформенных функций.
               </p>
               <div className="mt-5 grid gap-2">
                 {budgetSplit.map((item) => (
@@ -315,7 +315,7 @@ export function InvestorLanding() {
             <div className="grid gap-4">
               <div className="glass-panel p-6">
                 <p className="text-sm font-semibold uppercase text-cobalt">Business model</p>
-                <h2 className="mt-3 text-3xl font-semibold text-ink">Экономика строится на заявках, take rate и партнёрской подписке.</h2>
+                <h2 className="mt-3 text-3xl font-semibold text-ink">Экономика пока является моделью: выручка и take rate не заявляются до пилота и договоров.</h2>
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
                   {revenueStreams.map((stream) => (
                     <div key={stream.title} className="rounded-md border border-slate-200 bg-white/75 p-4">
@@ -347,7 +347,7 @@ export function InvestorLanding() {
                   <th className="px-4 py-3">Сценарий</th>
                   <th className="px-4 py-3">Заявки</th>
                   <th className="px-4 py-3">Конверсия</th>
-                  <th className="px-4 py-3">Net revenue</th>
+                  <th className="px-4 py-3">Статус выручки</th>
                 </tr>
               </thead>
               <tbody>
@@ -428,13 +428,13 @@ export function InvestorLanding() {
           <div className="glass-panel relative overflow-hidden p-6">
             <div className="absolute -bottom-16 -right-12 h-40 w-40 rounded-full bg-cobalt/10 blur-3xl" />
             <p className="text-sm font-semibold uppercase text-cobalt">Why now</p>
-            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Рынок созрел для локального travel layer.</h2>
+            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Рынок достаточно активен для проверки локального travel layer.</h2>
             <p className="mt-5 text-sm leading-6 text-slate-600">
-              Азербайджан уже получает туристический спрос, но единый цифровой маршрут ещё не стал стандартом рынка.
+              Официальные данные подтверждают поток, но не подтверждают автоматически спрос на Caspian UBook — это задача пилота.
             </p>
             <div className="relative mt-6 rounded-md border border-cobalt/15 bg-white/70 p-4">
               <p className="text-xs font-semibold uppercase text-slate-500">timing thesis</p>
-              <p className="mt-2 text-2xl font-semibold text-ink">Local-first сейчас важнее глобального каталога.</p>
+              <p className="mt-2 text-2xl font-semibold text-ink">Local-first — гипотеза пилота, а не доказанный рыночный факт.</p>
             </div>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">

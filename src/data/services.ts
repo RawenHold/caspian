@@ -321,7 +321,7 @@ export const services: ServiceItem[] = [
     upgradePhase: 10,
     mvpMode: "В MVP только payment record и ручное подтверждение offline payment.",
     notPromised: "Единая онлайн-оплата, refunds и split payments не входят в MVP.",
-    future: "Epoint, Kapital Bank, m10/Birbank, Stripe, reconciliation, refunds и payouts после legal/KYB.",
+    future: "Licensed PSP/acquirer, reconciliation, refunds и payouts только после legal/KYB, договоров и подтверждения доступности провайдера.",
     dependency: "Юрлицо, acquirer, merchant of record, PCI scope.",
     risk: "High",
   },

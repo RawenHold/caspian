@@ -15,7 +15,7 @@ npm run build
 
 - Main source data lives in `src/data`.
 - Public assets live in `public/assets`.
-- Market figures are intentionally labelled as `official`, `deck assumption`, or `planning model`.
+- Market figures shown on the site are restricted to official/public sources; pilot KPIs are labelled as internal targets, not market facts.
 - This is a spec-site only, not the real backend/admin MVP.
 - `public/assets/caspian-ubook-presentation.pdf` is a placeholder deck and should be replaced before public launch.
-- Hero image: Baku Old City panorama by AlixSaz, Wikimedia Commons, CC BY-SA 4.0.
+- Hero image: user-provided project asset (`public/assets/hero-bg.png`). Baku photo used in content sections: Wikimedia Commons, AlixSaz, CC BY-SA 4.0.

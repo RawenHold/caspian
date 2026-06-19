@@ -10,7 +10,7 @@ export const stageSpecs: Record<number, StageSpec> = {
   0: {
     reviewQa: "2 дня на ревизию scope, архитектуры, рисков и финальное согласование MVP boundary.",
     apiEndpoints: [],
-    notInScope: ["Разработка production-кода", "Подключение оплат", "Договоры с API-поставщиками без legal review", "Обещание всех SuperApp-функций в MVP"],
+    notInScope: ["Разработка production-кода", "Подключение оплат", "Договоры с API-поставщиками без legal review", "Обещание всех full platform-функций в MVP"],
     strictDod: ["MVP scope утверждён", "Статусы услуг согласованы", "Backlog разбит по этапам", "Риски и fallback-сценарии описаны", "Переход к Этапу 1 одобрен Tech Lead и Product"],
   },
   1: {

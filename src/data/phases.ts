@@ -73,7 +73,7 @@ const stage1Roles: RoleTask[] = [
     focus: "Собрать ядро API и правила доступа.",
     tasks: [
       "Инициализировать NestJS + TypeScript, версионирование /api/v1, валидацию, общие ошибки и health check.",
-      "Сделать регистрацию и вход через Google, Yandex, Apple, email-код и phone OTP; связать способы входа с одним пользователем.",
+      "Сделать регистрацию и вход через Google, Apple, email-код и phone OTP; связать способы входа с одним пользователем.",
       "Ввести роли: турист, гид, партнёр, support, admin, superadmin; закрыть admin API через RBAC.",
       "Создать базовые модули: users, profile, requests, suppliers, support, audit log.",
     ],
@@ -432,7 +432,7 @@ const stage7Roles: RoleTask[] = [
     focus: "Запустить 90-дневную проверку PMF.",
     tasks: [
       "Собрать dashboard: visitors, registered users, CTA clicks, requests, confirmed bookings, GMV, NPS, repeat requests.",
-      "Зафиксировать пороги: 50+ confirmed bookings, NPS >= 40, request -> booking conversion >= 30%.",
+      "Зафиксировать пороги: внутренние pilot KPI: confirmed requests, NPS, request -> booking conversion и support load.",
       "Подготовить список улучшений после пилота и правило перехода к Этапу 8.",
     ],
   },
@@ -561,7 +561,7 @@ const stage11Roles: RoleTask[] = [
 const stage12Roles: RoleTask[] = [
   {
     role: "Product / Growth",
-    focus: "Масштабировать Caspian UBook до SuperApp.",
+    focus: "Масштабировать Caspian UBook до full platform только после PMF.",
     tasks: [
       "Запустить loyalty, Caspian+, subscription, white-label и API marketplace.",
       "Планировать региональное расширение: Казахстан, Кыргызстан, Таджикистан.",
@@ -604,7 +604,7 @@ export const phases: Phase[] = [
     acceptance: ["Есть финальный список модулей MVP", "Каждая услуга имеет статус и fallback", "Команда понимает, что не входит в MVP", "Backlog верхнего уровня создан"],
     dod: ["MVP scope подписан stakeholders", "Партнёры размечены: API, deep link, manual или неизвестно", "Роли команды распределены"],
     gate: "Scope утверждён, backlog создан, команда готова к этапу 1.",
-    risk: "Главный риск - расширить MVP до полноценного SuperApp до проверки спроса.",
+    risk: "Главный риск - расширить MVP до full platform до проверки спроса.",
   },
   {
     id: 1,
@@ -722,7 +722,7 @@ export const phases: Phase[] = [
     tools: ["Playwright / Cypress", "Jest / Supertest", "k6 / Artillery", "Sentry", "Grafana / Datadog", "PostHog / Amplitude"],
     acceptance: ["Критические баги закрыты", "Support умеет обработать заявку", "Есть dashboard ключевых метрик", "Партнёры онбордены", "Список улучшений после пилота создан"],
     dod: ["Functional flows работают", "Informational разделы опубликованы", "Admin обрабатывает заявки", "Monitoring активен", "Support готов", "Пилот запущен"],
-    gate: "50+ confirmed bookings, NPS >= 40, request -> booking conversion >= 30% дают основание переходить к этапу 8.",
+    gate: "Внутренние KPI пилота, юридическая готовность и договоры дают основание переходить к этапу 8.",
     risk: "Пилот может не подтвердить PMF или перегрузить support. Решения принимаются по данным, не по предположениям.",
   },
   {
@@ -770,7 +770,7 @@ export const phases: Phase[] = [
     roleTasks: stage10Roles,
     workstreams: streamsFromRoles(stage10Roles),
     deliverables: ["Payment gateway", "Refund workflow", "Reconciliation", "Partner payouts"],
-    tools: ["Stripe / Adyen / Epoint / Kapital Bank / m10 after confirmation", "Payment webhooks", "Audit logs"],
+    tools: ["Licensed PSP/acquirer after legal/KYB confirmation", "Payment webhooks", "Audit logs"],
     acceptance: ["Юридическая модель подтверждена", "Raw card data не хранится", "Повторный callback не создаёт дубль", "Admin видит статусы оплаты"],
     dod: ["Live transactions tested", "Refund workflow works", "Reconciliation ready", "Security scan passed"],
     gate: "GMV достаточен, юридическая структура и acquiring позволяют принимать платежи.",
@@ -795,10 +795,10 @@ export const phases: Phase[] = [
   },
   {
     id: 12,
-    title: "Масштабирование SuperApp",
+    title: "Масштабирование full platform",
     marker: "Масштаб",
     duration: "после MVP",
-    goal: "Расширить Caspian UBook до региональной travel SuperApp платформы.",
+    goal: "Расширить Caspian UBook до региональной travel platform после подтверждённого PMF.",
     result: "Платформа поддерживает loyalty, subscription, marketplace, white-label, regional expansion и advanced AI.",
     summary: "Loyalty, Caspian+, API marketplace, white-label, regional expansion and advanced AI.",
     roleTasks: stage12Roles,

@@ -4,8 +4,6 @@ import { SectionHeader } from "./SectionHeader";
 
 const sourceTone: Record<string, string> = {
   official: "bg-teal-50 text-teal-800 border-teal-200",
-  "deck assumption": "bg-amber-50 text-amber-800 border-amber-200",
-  "planning model": "bg-sky-50 text-sky-800 border-sky-200",
 };
 
 export function MarketSection() {
@@ -13,8 +11,8 @@ export function MarketSection() {
     <section className="bg-white px-4 py-20 md:px-8">
       <SectionHeader
         eyebrow="Market opportunity"
-        title="Рынок растёт, а локальный слой поездки всё ещё фрагментирован."
-        text="Для инвесторского блока показываем цифры с прозрачным статусом источника: official, deck assumption или planning model."
+        title="Официальные данные по Азербайджану отделены от продуктовых гипотез."
+        text="В этом блоке оставлены только подтверждённые публичные показатели. Продуктовые KPI вынесены отдельно и не представлены как market facts."
       />
       <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[1fr_1.1fr]">
         <div className="relative min-h-[420px] overflow-hidden rounded-md">
@@ -22,7 +20,7 @@ export function MarketSection() {
           <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />
           <div className="absolute bottom-0 p-6 text-white">
             <p className="text-sm font-semibold uppercase text-white/80">Tourism platform thesis</p>
-            <h3 className="mt-2 text-3xl font-semibold">Azerbaijan needs a concierge layer between discovery and booking.</h3>
+            <h3 className="mt-2 text-3xl font-semibold">Product hypothesis: a verified request/support layer may reduce friction between discovery and booking.</h3>
           </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">

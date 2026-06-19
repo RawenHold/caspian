@@ -12,13 +12,13 @@ const columns = [
     title: "PMF pilot",
     icon: Clock3,
     text: "90 дней данных показывают, какие сервисы переводить в полноценные transactional modules.",
-    items: ["50+ bookings target", "NPS >= 40", "CTA demand by section", "Support load analysis"],
+    items: ["Internal target: confirmed requests", "Internal target: NPS measured", "CTA demand by section", "Support load analysis"],
   },
   {
     title: "Full Platform",
     icon: Layers3,
     text: "После подтверждения спроса подключаются API, платежи, mobile, Telegram, B2B и loyalty.",
-    items: ["OTA / eSIM / insurance API", "Online payments", "Partner dashboards", "Regional SuperApp scale"],
+    items: ["OTA / eSIM / insurance API", "Online payments", "Partner dashboards", "Regional platform scale"],
   },
 ];
 

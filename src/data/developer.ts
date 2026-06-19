@@ -1,22 +1,22 @@
 export const quickNav = ["Backend", "Frontend", "DB", "DevOps", "QA", "AI", "Роли", "API", "Этапы"];
 
 export const techStack = [
-  { layer: "Frontend", value: "Next.js 14 App Router + TypeScript + Tailwind", note: "SSR/SSG, быстрые публичные страницы, единый UI для investor, tourist и admin." },
-  { layer: "Backend", value: "NestJS + TypeScript + Prisma ORM", note: "Модульный монолит с явными доменами и строгими DTO." },
-  { layer: "Database", value: "PostgreSQL primary + Redis cache/sessions", note: "PostgreSQL хранит бизнес-данные, Redis держит сессии, OTP и быстрый cache." },
-  { layer: "Auth", value: "NextAuth или custom JWT + OAuth", note: "Google, Apple, email/phone OTP; роли закрываются RBAC." },
-  { layer: "AI", value: "OpenAI API GPT-4o + RAG", note: "Ответы строятся на внутренней базе знаний, статусах услуг и локальных правилах Азербайджана." },
-  { layer: "Storage", value: "Cloudflare R2", note: "Фото, ваучеры, подтверждения партнёров и будущие документы заявок." },
-  { layer: "Infra", value: "Docker Compose -> Railway/Render -> VPS", note: "Одинаковый dev-контур, staging для пилота и управляемый production." },
+  { layer: "Frontend", value: "Next.js 16.2.9 App Router + React 19 + TypeScript + Tailwind", note: "Соответствует текущему package.json проекта. Публичный сайт сейчас является spec-site, не production backend." },
+  { layer: "Backend", value: "NestJS + TypeScript + Prisma ORM", note: "Планируемая backend-архитектура MVP: модульный монолит с явными доменами и строгими DTO." },
+  { layer: "Database", value: "PostgreSQL primary + Redis cache/sessions", note: "Планируемая схема: PostgreSQL для бизнес-данных, Redis для сессий, OTP и короткого cache." },
+  { layer: "Auth", value: "Custom JWT/Auth.js-compatible flow + OTP", note: "Конкретные OAuth-провайдеры выбираются на этапе реализации. Нельзя обещать provider, которого нет в scope или договорённостях." },
+  { layer: "AI", value: "LLM API + RAG + human handoff", note: "Не фиксируем конкретную модель в ТЗ. Ответы должны иметь source/context или переводиться в support." },
+  { layer: "Storage", value: "S3-compatible object storage", note: "Фото, ваучеры, подтверждения партнёров и будущие документы заявок; конкретный провайдер выбирается при реализации." },
+  { layer: "Infra", value: "Docker Compose -> staging -> production host", note: "Dev-контур и staging обязательны. Railway/Render/VPS выбираются по бюджету, региону, SLA и требованиям к данным." },
   { layer: "CI/CD", value: "GitHub Actions", note: "Lint, typecheck, tests, build, migrations и staging deploy." },
-  { layer: "Monitoring", value: "Sentry + PostHog", note: "Ошибки, воронки, события заявок и поведение пользователей." },
-  { layer: "Payments MVP", value: "Manual confirmation; Epoint/Kapital Bank/m10 post-MVP", note: "В MVP не обещаем автоматическую оплату там, где юридика и партнёры не готовы." },
+  { layer: "Monitoring", value: "Sentry/PostHog-compatible monitoring", note: "Конкретные SaaS-инструменты выбираются при реализации; в ТЗ важны ошибки, funnel events и privacy-safe logging." },
+  { layer: "Payments MVP", value: "Manual payment record only", note: "В MVP нет обещания automatic checkout. PSP/acquirer, refunds, payouts и reconciliation добавляются только после legal/KYB." },
 ];
 
 export const architectureNotes = [
-  "Микросервисы не нужны до Series A: команда маленькая, MVP должен выйти за 18 недель, а главный риск сейчас продуктовый, не инфраструктурный.",
+  "Микросервисы не нужны до Series A: команда маленькая, MVP должен выйти быстро, а главный риск сейчас продуктовый и юридический, не инфраструктурный.",
   "Модульный монолит даёт скорость без хаоса: users, requests, services, suppliers, support, content, audit и AI имеют отдельные границы.",
-  "Внешние интеграции проходят через backend. Frontend не общается напрямую с OTA, платёжками, AI или поставщиками.",
+  "Внешние интеграции проходят через backend. Frontend не общается напрямую с OTA, платёжными провайдерами, AI или поставщиками.",
 ];
 
 export const dataEntities = [
@@ -59,7 +59,7 @@ export const readyChecklist = [
 ];
 
 export const qaStrategy = [
-  { title: "Unit tests", text: "Jest для бизнес-логики сервисов; >80% coverage на core modules: auth, requests, RBAC, status transitions." },
+  { title: "Unit tests", text: "Jest для бизнес-логики сервисов; coverage target применяется к core modules: auth, requests, RBAC, status transitions." },
   { title: "Integration tests", text: "Supertest для API: auth, users/me, request create/read, admin status update, audit log." },
   { title: "E2E", text: "Playwright flow: регистрация -> заявка -> admin -> статус -> уведомление или support handoff." },
   { title: "Manual QA", text: "Чеклист перед закрытием каждого этапа: responsive, empty/error states, роли, длинные тексты, статусы услуг." },
@@ -69,13 +69,13 @@ export const qaStrategy = [
 
 export const glossary = [
   { term: "Request", definition: "Заявка пользователя на услугу. Может быть без оплаты и без финального подтверждения партнёром." },
-  { term: "Order", definition: "Подтверждённая коммерческая операция, привязанная к Request." },
+  { term: "Order", definition: "Подтверждённая коммерческая операция, привязанная к Request. В MVP может существовать без online checkout." },
   { term: "Booking", definition: "Финальное бронирование у партнёра или через API. В MVP часто заменяется ручным подтверждением." },
   { term: "Support case", definition: "Обращение в поддержку. Может быть связано с Request, но не всегда." },
   { term: "Supplier", definition: "Конкретный поставщик услуги: отель, гид, трансфер, страховой или eSIM-провайдер." },
-  { term: "Partner", definition: "Supplier с коммерческой договорённостью, условиями, SLA и проверенным контактом." },
+  { term: "Partner", definition: "Supplier с договорённостью, условиями, SLA и проверенным контактом. Без этого партнёром его не называем." },
   { term: "Deep link", definition: "Переход во внешний сервис без прямого обмена данными через API." },
-  { term: "API integration", definition: "Прямой обмен данными с внешним сервисом: доступность, бронь, оплата, статус." },
-  { term: "Assisted flow", definition: "Сценарий, где платформа помогает через заявку или support, но не завершает транзакцию автоматически." },
-  { term: "PMF", definition: "Для Caspian UBook: NPS >40, 1 000 заявок, 12-18% conversion to confirmed service, 50+ активных партнёров и повторные заявки." },
+  { term: "API integration", definition: "Прямой обмен данными с внешним сервисом: доступность, бронь, оплата, статус. Требует legal/API confirmation." },
+  { term: "Assisted flow", definition: "Платформа помогает через заявку или support, но не завершает транзакцию автоматически." },
+  { term: "PMF", definition: "Для Caspian UBook это внутренние KPI пилота: заявки, NPS, conversion, проверенные партнёры и повторные заявки. Это не рыночные факты." },
 ];
