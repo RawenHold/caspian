@@ -10,7 +10,7 @@ export const techStack = [
   { layer: "Infra", value: "Docker Compose -> staging -> production", note: "Dev и staging обязательны.", why: "Production только после 48 часов staging без critical bugs." },
   { layer: "CI/CD", value: "GitHub Actions", note: "Lint, typecheck, tests, build, migrations и staging deploy.", why: "Каждая задача проходит один и тот же predictable path: PR -> review -> tests -> staging -> accept." },
   { layer: "Monitoring", value: "Error + product analytics", note: "Sentry/PostHog-compatible monitoring без утечки персональных данных.", why: "Нужны ошибки, funnel events, support load и PMF dashboard." },
-  { layer: "Payments MVP", value: "Manual payment record only", note: "Никакого auto-checkout в MVP.", why: "PSP/acquirer, refunds, payouts и reconciliation добавляются только после legal/KYB и договоров." },
+  { layer: "Payments MVP", value: "Manual payment record -> PSP shortlist", note: "В MVP нет auto-checkout; Phase 10 готовит Epoint/Kapital/PASHA/MilliKart/Portmanat/m10 route после проверки.", why: "PSP/acquirer, wallets, refunds, payouts и reconciliation добавляются только после legal/KYB, provider confirmation и договоров." },
 ];
 
 export const architectureNotes = [
@@ -20,10 +20,10 @@ export const architectureNotes = [
 ];
 
 export const azDevContext = [
-  { title: "Платёжный контур", text: "Фазы 0-7: только manual payment record в AdminPanel. PSP, refunds, payouts и reconciliation - после договоров, legal/KYB и выбора лицензированного провайдера." },
+  { title: "Платёжный контур", text: "Фазы 0-7: только manual payment record в AdminPanel. Phase 10 shortlist: Epoint, Kapital Bank, PASHA Bank/acquirer route, MilliKart, Portmanat, m10/Birbank, Apple Pay/Google Pay через поддерживаемого провайдера - только после provider verification, договоров и legal/KYB." },
   { title: "Языки", text: "az для локального контекста и партнёрских шаблонов, ru для крупного source-market потока, en для международной аудитории и B2B. Все строки должны жить в locale-файлах при реализации продукта." },
   { title: "Данные и согласия", text: "Персональные данные туристов, заявки, платежные отметки и support actions проектируются с consent, role access и audit log с первого этапа." },
-  { title: "Локальная операционка", text: "Поставщики, гиды, отели и трансферы подключаются через KYB/KYC, SLA, правила отмены и ручной escalation. Supplier становится Partner только после проверки." },
+  { title: "Локальная операционка", text: "Поставщики, гиды, отели и трансферы подключаются через KYB/KYC, SLA, правила отмены и ручной escalation. Technopark/tax status и startup incentives учитываются только после legal review." },
 ];
 
 export const dataEntities = [

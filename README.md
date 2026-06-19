@@ -15,7 +15,7 @@ npm run build
 
 - Main source data lives in `src/data`.
 - Public assets live in `public/assets`.
-- Market figures shown on the site are restricted to official/public sources; pilot KPIs are labelled as internal targets, not market facts.
+- Market figures include official/public sources plus clearly labelled investor model assumptions; PSP/Technopark items are roadmap inputs requiring legal/provider confirmation.
 - This is a spec-site only, not the real backend/admin MVP.
 - `public/assets/caspian-ubook-presentation.pdf` is a placeholder deck and should be replaced before public launch.
 - Hero and content visuals use the user-provided high-resolution project asset (`public/assets/hero-bg.png`).

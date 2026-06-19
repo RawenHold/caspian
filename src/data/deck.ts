@@ -6,9 +6,11 @@ export const heroProof = [
 
 export const deckMetrics = [
   { value: "2.6267M", label: "иностранных прибытий, 2024", note: "Госкомстат Азербайджана / State Border Service: +25,9% к 2023 году, 196 стран." },
-  { value: "4.2828M", label: "ночей в отелях, 2024", note: "Hotels and similar establishments: +25,1% к 2023; 60,9% ночей зарегистрированы в Баку." },
+  { value: "3.5M", label: "deck model 2026", note: "Плановая модель окна запуска, не официальный прогноз. Используется для расчёта launch capacity." },
+  { value: "6.0M", label: "2030 target scenario", note: "Целевой сценарий для инвесторской модели; требует ссылки на утверждённую госпрограмму перед публичным deck." },
+  { value: "$4.2B", label: "TAM GMV model", note: "Модель: 3.5M путешественников x $1,200 average trip spend. Это model assumption." },
+  { value: "$40M", label: "SOM net revenue Y5", note: "Консервативный сценарий после расширения вертикалей, партнёрской сети и транзакционного слоя." },
   { value: "694.2M AZN", label: "выручка отелей, 2024", note: "Госкомстат: revenue of hotels and similar establishments, +42,0% к 2023 году." },
-  { value: "128.7M AZN", label: "выручка отелей, Q1 2026", note: "Январь-март 2026: +2,9% к январю-марту 2025; ранний операционный индикатор." },
 ];
 
 export const problemJourney = {
@@ -47,10 +49,10 @@ export const solutionPillars = [
 ];
 
 export const marketTimeline = [
-  { year: "2024 arrivals", value: "2.6267M", text: "иностранцы и лица без гражданства, прибывшие в Азербайджан; +25,9% к 2023" },
-  { year: "2024 hotels", value: "4.2828M", text: "ночей в hotels and similar establishments; 60,9% зарегистрировано в Баку" },
-  { year: "2024 revenue", value: "694.2M AZN", text: "выручка hotels and similar establishments; +42,0% к 2023" },
-  { year: "Q1 2026", value: "128.7M AZN", text: "выручка отелей за январь-март 2026; +2,9% год к году" },
+  { year: "2024 official", value: "2.6267M", text: "иностранцы и лица без гражданства, прибывшие в Азербайджан; +25,9% к 2023" },
+  { year: "2024 hotels", value: "694.2M AZN", text: "выручка hotels and similar establishments; +42,0% к 2023" },
+  { year: "2026 model", value: "3.5M", text: "deck model для launch-window planning; не официальный прогноз" },
+  { year: "2030 target", value: "6.0M", text: "target scenario для инвесторской модели; публично только со ссылкой на программу" },
 ];
 
 export const customerSegments = [
@@ -74,7 +76,7 @@ export const revenueStreams = [
 ];
 
 export const budgetSplit = [
-  { label: "Product & Engineering", value: "45%", amount: "$234K", text: "CTO/Lead, backend, frontend, QA, design, AI integration и локальная delivery-команда в Баку." },
+  { label: "Product & Engineering", value: "45%", amount: "$234K", text: "CTO/Lead, backend, frontend, QA, design, AI integration. Команда в Баку; Technopark tax режим учитывается только после legal confirmation статуса резидента." },
   { label: "Marketing & Growth", value: "25%", amount: "$130K", text: "Performance tests, SEO/content, source-market tests и пилотные кампании по официально видимым рынкам прибытия." },
   { label: "Sales & Partnerships", value: "20%", amount: "$104K", text: "Подключение отелей, гидов, трансферов и локальных сервисов через договор, KYB/KYC, SLA и правила подтверждения." },
   { label: "Legal, Finance, Admin", value: "10%", amount: "$52K", text: "Договоры, персональные данные, платёжная модель, accounting, compliance и выбор лицензированного платёжного контура после legal review." },
@@ -112,5 +114,7 @@ export const whyNow = [
   "2.6267M иностранных прибытий в 2024 (+25,9%) - подтверждённый baseline для старта пилота.",
   "Поток диверсифицирован: Россия, Türkiye, Индия, Иран, страны Залива, Казахстан, Пакистан, Китай и Израиль видны в официальной статистике.",
   "Баку концентрирует 60,9% гостиничных ночей, но Гусар, Нафталан, Габала и Губа уже заметны в гостиничной статистике.",
+  "COP29 прошёл в Баку в ноябре 2024: это подтверждённый глобальный event-сигнал, который можно использовать как visibility context без обещания прямого tourism uplift.",
   "ATB ведёт статистику, исследования, business events и certified guides/hotels; рынок даёт достаточно данных, чтобы строить local-first travel layer сейчас.",
+  "Technopark/innovation ecosystem, локальные PSP и mobile wallets добавляют инфраструктурный upside, но каждое преимущество проходит legal/provider verification.",
 ];

@@ -143,7 +143,7 @@ export default function DevelopersPage() {
           <div className="mt-6 rounded-md border border-red-200 bg-red-50 p-5">
             <p className="text-sm font-semibold uppercase text-red-700">Платежи в MVP</p>
             <p className="mt-2 text-lg font-semibold text-ink">Только manual payment record. Никакого auto-checkout.</p>
-            <p className="mt-2 text-sm leading-6 text-slate-700">PSP + acquirer выбираются после legal/KYB. Полный платёжный контур относится к этапу 10.</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">Phase 10 shortlist: Epoint, Kapital Bank, PASHA Bank/acquirer route, MilliKart, Portmanat, m10/Birbank, Apple Pay/Google Pay через поддерживаемого провайдера. Всё после provider verification, legal/KYB и договоров.</p>
           </div>
           <div className="mt-6 grid gap-3 md:grid-cols-3">
             {architectureNotes.map((item) => (

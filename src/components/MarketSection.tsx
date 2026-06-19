@@ -4,6 +4,7 @@ import { SectionHeader } from "./SectionHeader";
 
 const sourceTone: Record<string, string> = {
   official: "bg-teal-50 text-teal-800 border-teal-200",
+  model: "bg-amber-50 text-amber-800 border-amber-200",
 };
 
 export function MarketSection() {
