@@ -11,19 +11,18 @@ import {
   ShieldCheck,
   Sparkles,
   Target,
-  TrendingUp,
 } from "lucide-react";
 import {
   budgetSplit,
   competitorRows,
   customerSegments,
-  deckMetrics,
+  investorModelMetrics,
   financialScenarios,
   heroProof,
   investorRisks,
   investorRoadmap,
-  marketContextCards,
-  marketTimeline,
+  marketProofNotes,
+  marketSnapshot,
   painPoints,
   problemJourney,
   revenueStreams,
@@ -89,20 +88,20 @@ export function InvestorLanding() {
         kicker="Разделы инвестора"
       />
 
-      <section id="top" className="relative min-h-[92vh] overflow-hidden pt-[112px] md:pt-[72px]">
+      <section id="top" className="relative min-h-[88vh] overflow-hidden pt-[112px] md:pt-[72px]">
         <div className="absolute inset-0 bg-[url('/assets/hero-bg.png')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/92 to-white/30" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-milk to-transparent" />
-        <div className="relative mx-auto grid min-h-[calc(92vh-112px)] max-w-7xl content-center px-4 py-14 md:min-h-[calc(92vh-72px)] md:px-8">
-          <div className="max-w-5xl">
+        <div className="relative mx-auto grid min-h-[calc(88vh-112px)] max-w-7xl content-center px-4 py-12 md:min-h-[calc(88vh-72px)] md:px-8">
+          <div className="max-w-4xl">
             <p className="mb-5 inline-flex max-w-full items-center gap-2 rounded-md border border-cobalt/20 bg-white/75 px-3 py-2 text-sm font-semibold text-cobalt backdrop-blur">
               <Sparkles size={16} /> Caucasus travel concierge layer
             </p>
-            <h1 className="font-display text-4xl leading-[1.04] text-ink sm:text-5xl md:text-7xl">
-              871,7 тыс. иностранцев приехали в Азербайджан за январь-май 2026. Поездку каждый всё ещё собирает вручную.
+            <h1 className="font-display text-4xl leading-[1.04] text-ink sm:text-5xl md:text-6xl">
+              871,7 тыс. гостей за 5 месяцев. Одна заявка вместо хаоса поездки.
             </h1>
-            <p className="mt-7 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
-              Госкомстат фиксирует свежий поток из 186 стран: январь-май 2026 ниже января-мая 2025 на 11,0%, но это всё ещё сотни тысяч поездок без единого concierge flow. Жильё в Booking, гид в Telegram, трансфер через знакомых, оплата наличными, поддержка - нигде. Caspian UBook объединяет всё это в одну заявку.
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
+              Свежий срез Госкомстата: Jan-May 2026, 186 стран, -11,0% к Jan-May 2025. Последний полный годовой baseline - 2,626,679 прибытий в 2024. Caspian UBook превращает жильё, гида, трансфер и поддержку в управляемый маршрут.
             </p>
             <div className="mt-8 grid max-w-4xl gap-3 sm:grid-cols-3">
               {heroProof.map((item) => (
@@ -113,8 +112,8 @@ export function InvestorLanding() {
                 </div>
               ))}
             </div>
-            <p className="mt-3 max-w-4xl text-xs leading-5 text-slate-500">
-              1 000+ заявок, NPS и conversion - внутренние KPI пилота. Рыночные цифры ниже отделены от модельных показателей.
+            <p className="mt-3 max-w-3xl text-xs leading-5 text-slate-500">
+              Официальные факты, расчёты и investor model разделены по смыслу, чтобы не смешивать статистику рынка с планом запуска.
             </p>
           </div>
         </div>
@@ -166,7 +165,7 @@ export function InvestorLanding() {
       <section className="bg-white px-4 py-16 md:px-8">
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="relative min-h-[520px] overflow-hidden rounded-md">
-            <Image src="/assets/hero-bg.png" alt="Icherisheher, Baku" fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
+            <Image src="https://eurasia.travel/wp-content/uploads/2025/03/2.-Maiden-Tower-Baku.jpg" alt="Maiden Tower, Baku" fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/78 via-ink/20 to-transparent" />
             <div className="absolute bottom-0 max-w-xl p-6 text-white">
               <p className="text-sm font-semibold uppercase text-white/75">Concierge-first platform</p>
@@ -187,58 +186,55 @@ export function InvestorLanding() {
         </div>
       </section>
 
-      <section id="market-opportunity" className="scroll-mt-24 bg-milk px-4 py-16 md:px-8">
+      <section id="market-opportunity" className="scroll-mt-24 bg-milk px-4 py-14 md:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
-            <div className="max-w-4xl">
+          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase text-cobalt">Market opportunity</p>
-              <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Официальные данные показывают рынок, на котором можно запускать concierge-first пилот.</h2>
+              <h2 className="mt-3 text-3xl font-semibold leading-tight text-ink md:text-5xl">Рынок есть. Проблема не в спросе, а в том, что поездка распадается на разрозненные сервисы.</h2>
             </div>
-            <div className="glass-panel relative overflow-hidden p-5">
-              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-lagoon/15 blur-2xl" />
-              <div className="relative flex items-start gap-4">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-cobalt text-white">
-                  <TrendingUp size={22} />
-                </span>
-                <div>
-                  <p className="text-sm font-semibold uppercase text-cobalt">market signal</p>
-                  <p className="mt-2 text-lg font-semibold leading-7 text-ink">Подтверждены иностранные прибытия, гостиничные ночи и hotel revenue. Пилот превращает этот спрос в измеряемые заявки.</p>
-                </div>
-              </div>
+            <div className="glass-panel p-5">
+              <p className="text-sm font-semibold uppercase text-cobalt">короткий вывод</p>
+              <p className="mt-2 text-lg font-semibold leading-7 text-ink">Caspian UBook не продаёт “ещё один каталог”. Он закрывает операционный слой: собрать запрос, проверить партнёра, показать статус и довести поездку до исполнения.</p>
             </div>
           </div>
 
-          <div className="mt-8 grid gap-3 md:grid-cols-4">
-            {marketTimeline.map((item, index) => (
-              <div key={item.year} className="metric-card signal-card p-5" style={{ animationDelay: `${index * 70}ms` }}>
-                <div className="flex items-center justify-between gap-3">
-                  <p className="text-sm font-semibold text-cobalt">{item.year}</p>
-                  <span className="h-2 w-2 rounded-full bg-lagoon shadow-[0_0_18px_rgba(23,185,193,0.75)]" />
-                </div>
-                <p className="mt-3 text-4xl font-semibold text-ink md:text-5xl">{item.value}</p>
-                <p className="mt-3 text-sm leading-6 text-slate-600">{item.text}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-6 grid gap-3 md:grid-cols-3 xl:grid-cols-6">
-            {deckMetrics.map((metric, index) => (
-              <div key={metric.label} className="feature-card signal-card p-5" style={{ animationDelay: `${index * 60}ms` }}>
-                <p className="text-3xl font-semibold text-ink md:text-4xl">{metric.value}</p>
-                <p className="mt-2 font-semibold text-slate-700">{metric.label}</p>
-                <p className="mt-3 text-xs leading-5 text-slate-500">{metric.note}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-6 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-            {marketContextCards.map((item) => (
-              <article key={item.label} className="rounded-md border border-cobalt/15 bg-white/85 p-5 shadow-[0_18px_55px_rgba(34,48,89,0.08)]">
+          <div className="mt-8 grid gap-3 lg:grid-cols-3">
+            {marketSnapshot.map((item) => (
+              <article key={item.label} className="signal-card p-5">
                 <p className="text-xs font-semibold uppercase text-cobalt">{item.label}</p>
-                <p className="mt-2 text-2xl font-semibold text-ink">{item.value}</p>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{item.text}</p>
+                <div className="mt-4 flex flex-wrap items-end gap-x-4 gap-y-1">
+                  <p className="text-5xl font-semibold leading-none text-ink">{item.value}</p>
+                  <p className="pb-1 text-lg font-semibold text-slate-700">{item.title}</p>
+                </div>
+                <p className="mt-4 text-sm leading-6 text-slate-600">{item.text}</p>
               </article>
             ))}
+          </div>
+
+          <div className="mt-4 grid gap-3 rounded-md border border-cobalt/10 bg-white/70 p-4 md:grid-cols-3">
+            {marketProofNotes.map((note) => (
+              <p key={note} className="text-xs leading-5 text-slate-600">{note}</p>
+            ))}
+          </div>
+
+          <div className="mt-8">
+            <div className="mb-3 flex flex-col justify-between gap-2 md:flex-row md:items-end">
+              <div>
+                <p className="text-sm font-semibold uppercase text-cobalt">Investor model</p>
+                <h3 className="mt-1 text-2xl font-semibold text-ink">Четыре цифры для разговора о масштабе, не вместо официальной статистики.</h3>
+              </div>
+              <span className="rounded-md border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-semibold text-ink">model / target / official separated</span>
+            </div>
+            <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+              {investorModelMetrics.map((metric) => (
+                <article key={metric.label} className="rounded-md border border-slate-200 bg-white p-4 shadow-[0_14px_44px_rgba(34,48,89,0.07)]">
+                  <p className="text-3xl font-semibold text-ink">{metric.value}</p>
+                  <p className="mt-2 font-semibold text-slate-700">{metric.label}</p>
+                  <p className="mt-2 text-xs leading-5 text-slate-500">{metric.note}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
       </section>

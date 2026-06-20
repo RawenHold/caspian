@@ -1,22 +1,30 @@
 export const heroProof = [
-  { label: "Seed plan", value: "$520K", text: "18 месяцев runway на MVP, пилот, партнёрские договоры, legal/compliance и первые продажи в Баку." },
-  { label: "MVP sprint", value: "90 дней", text: "Заявки, партнёры, конверсия, NPS, повторный спрос и стоимость обработки в одном пилотном цикле." },
-  { label: "PMF gate", value: "1 000+", text: "Заявок до перехода к оплатам, API, mobile и партнёрским кабинетам." },
+  { label: "свежий официальный срез", value: "871.7K", text: "Jan-May 2026: иностранцы и лица без гражданства из 186 стран; -11,0% к Jan-May 2025." },
+  { label: "последний полный год", value: "2.6267M", text: "2024 остаётся последним полным годовым baseline в официальном tourism XLS Госкомстата." },
+  { label: "что делает Caspian UBook", value: "1 заявка", text: "Жильё, гид, трансфер, маршрут и поддержка собираются в один управляемый concierge flow." },
 ];
 
-export const deckMetrics = [
-  { value: "871.7K", label: "прибытий, Jan-May 2026", note: "Госкомстат / State Border Service: иностранцы и лица без гражданства из 186 стран; -11,0% к Jan-May 2025." },
-  { value: "~979K", label: "расчёт Jan-May 2025", note: "Выведено из официального сравнения: 871.7K в Jan-May 2026 = на 11,0% ниже соответствующего периода 2025." },
-  { value: "2.6267M", label: "последний полный год, 2024", note: "Официальный годовой ряд Госкомстата в tourism XLS обновлён 04.06.2026 и пока заканчивается 2024 годом." },
-  { value: "3.5M", label: "deck model 2026", note: "Плановая модель окна запуска, не официальный прогноз. Используется для расчёта launch capacity." },
-  { value: "6.0M", label: "2030 target scenario", note: "Целевой сценарий для инвесторской модели; требует ссылки на утверждённую госпрограмму перед публичным deck." },
-  { value: "$4.2B", label: "TAM GMV model", note: "Модель: 3.5M путешественников x $1,200 average trip spend. Это model assumption." },
-  { value: "$40M", label: "SOM net revenue Y5", note: "Консервативный сценарий после расширения вертикалей, партнёрской сети и транзакционного слоя." },
-  { value: "694.2M AZN", label: "выручка отелей, 2024", note: "Госкомстат: revenue of hotels and similar establishments, +42,0% к 2023 году." },
+export const marketSnapshot = [
+  { label: "официально сейчас", value: "871.7K", title: "Jan-May 2026", text: "Свежий срез Госкомстата: 186 стран, 70,0% прибытий воздушным транспортом, -11,0% к сопоставимому периоду 2025." },
+  { label: "полный год", value: "2.6267M", title: "2024 baseline", text: "Последний полный официальный годовой ряд: +25,9% к 2023. Это честная база для investor narrative." },
+  { label: "модель запуска", value: "3.5M", title: "2026 capacity model", text: "Внутренняя модель для планирования продукта и продаж. Не официальный прогноз и не market fact." },
+];
+
+export const investorModelMetrics = [
+  { value: "6.0M", label: "2030 target scenario", note: "целевой сценарий, публично только со ссылкой на программу" },
+  { value: "$4.2B", label: "TAM GMV model", note: "3.5M путешественников x $1,200 average trip spend" },
+  { value: "$40M", label: "SOM net revenue Y5", note: "консервативный сценарий net revenue после масштабирования" },
+  { value: "694.2M AZN", label: "hotel revenue 2024", note: "официальная выручка hotels and similar establishments, +42,0% к 2023" },
+];
+
+export const marketProofNotes = [
+  "Jan-May 2025 comparable: около 979K, рассчитано из официального YoY-сравнения 2026.",
+  "Годовой ряд Госкомстата, обновлённый 04.06.2026, пока заканчивается 2024 годом.",
+  "Модельные показатели отделены от официальной статистики и не подаются как факт рынка.",
 ];
 
 export const problemJourney = {
-  title: "Турист приезжает за Азербайджаном, а поездку всё ещё собирает по частям.",
+  title: "Турист приезжает в Азербайджан за впечатлениями, но поездку собирает по частям.",
   text: "Прилетел в Баку, хочет Ичеришехер, Шеки, Губу, нафталанские ванны, гида, трансфер и ресторан с кутабом. Вместо одного маршрута - вкладки, чаты, разные правила отмены, ручные подтверждения и поддержка, которая часто не видит весь контекст поездки.",
 };
 
@@ -48,23 +56,6 @@ export const solutionPillars = [
     title: "MVP сначала измеряет спрос",
     text: "Первый релиз строит заявки, admin/support, статусы и аналитику. Оплаты, API, mobile, Telegram и B2B включаются только после pilot data и legal readiness.",
   },
-];
-
-export const marketTimeline = [
-  { year: "2020", value: "0.8M", text: "нижняя точка пандемии в investor timeline; используется как historical context" },
-  { year: "2023", value: "2.1M", text: "этап восстановления туристического потока перед ростом 2024" },
-  { year: "2024 official", value: "2.6267M", text: "последний полный годовой baseline в официальном tourism XLS Госкомстата; +25,9% к 2023" },
-  { year: "Jan-May 2025 calc", value: "~979K", text: "расчёт из официальной публикации: Jan-May 2026 на 11,0% ниже Jan-May 2025" },
-  { year: "Jan-May 2026 official", value: "871.7K", text: "свежий срез Госкомстата: 186 стран, 70,0% прибытий воздушным транспортом" },
-  { year: "2026 model", value: "3.5M", text: "deck model для launch-window planning; не официальный прогноз" },
-  { year: "2030 target", value: "6.0M", text: "target scenario для инвесторской модели; публично только со ссылкой на программу" },
-];
-
-export const marketContextCards = [
-  { label: "WTTC 2025", value: "₼10.3B", text: "tourism GDP contribution context from prompt: 8.2% of GDP, +32% YoY; verify source before final public deck." },
-  { label: "Digital payments", value: "91%", text: "prompt input for electronic payments share; used as payment-readiness narrative pending final source check." },
-  { label: "Global visibility", value: "COP29 + F1", text: "Baku events create visibility context; no quantified uplift is promised." },
-  { label: "Travel narratives", value: "Karabakh · Naftalan · Sheki", text: "Karabakh, Naftalan SPA and Sheki UNESCO create differentiated Azerbaijan routes for content and pilot demand." },
 ];
 
 export const customerSegments = [
