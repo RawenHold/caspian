@@ -1,7 +1,6 @@
-import { Download, FileText, MessageCircle, Sparkles } from "lucide-react";
+import { Download, FileText, Sparkles } from "lucide-react";
 
 const deckHref = "/assets/caspian-ubook-presentation.pdf";
-const telegramHref = "https://t.me/USERNAME";
 
 export function PresentationCta({ compact = false }: { compact?: boolean }) {
   return (
@@ -22,20 +21,16 @@ export function PresentationCta({ compact = false }: { compact?: boolean }) {
                 <span className="rounded-full border border-cobalt/15 bg-cobalt/5 px-2.5 py-1 text-xs font-semibold text-cobalt">Seed $520K</span>
               </div>
               <p className="mt-2 max-w-xl text-sm leading-6 text-slate-600 md:text-base">
-                Быстрый доступ к прямому контакту и investor deck. Всё, что нужно для первого разговора по раунду, пилоту в Баку/Шеки/Губе и MVP-границам.
+Investor deck собирает раунд, пилот, риски и модель в один документ. Этого достаточно, чтобы быстро решить, есть ли смысл переходить к разговору о $520K.
               </p>
               <div className="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-slate-500">
-                <span className="rounded-md bg-slate-100 px-2.5 py-1">Telegram</span>
                 <span className="rounded-md bg-slate-100 px-2.5 py-1">PDF deck</span>
-                <span className="rounded-md bg-slate-100 px-2.5 py-1">Seed round</span>
+                <span className="rounded-md bg-slate-100 px-2.5 py-1">Seed $520K</span>
               </div>
             </div>
           </div>
-          <div className="grid gap-2 sm:grid-cols-2 lg:min-w-[390px]">
-            <a href={telegramHref} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-md bg-cobalt px-4 py-3 text-sm font-semibold text-white shadow-glass transition hover:-translate-y-0.5 hover:bg-ink">
-              Связаться <MessageCircle size={16} />
-            </a>
-            <a href={deckHref} download className="inline-flex items-center justify-center gap-2 rounded-md border border-cobalt/20 bg-white px-4 py-3 text-sm font-semibold text-cobalt transition hover:-translate-y-0.5 hover:bg-cobalt/5">
+          <div className="lg:min-w-[220px]">
+            <a href={deckHref} download className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-cobalt px-4 py-3 text-sm font-semibold text-white shadow-glass transition hover:-translate-y-0.5 hover:bg-ink">
               Скачать презентацию <Download size={16} />
             </a>
           </div>

@@ -47,7 +47,6 @@ const investorSectionNav = [
 ];
 
 const investorSectionActions = [
-  { href: "https://t.me/USERNAME", label: "Связаться", external: true, accent: true },
   { href: "/assets/caspian-ubook-presentation.pdf", label: "Скачать презентацию", download: true },
   { href: "/developers", label: "Для разработчиков" },
   { href: "/stages", label: "Этапы реализации" },
@@ -95,13 +94,13 @@ export function InvestorLanding() {
         <div className="relative mx-auto grid min-h-[calc(88vh-112px)] max-w-7xl content-center px-4 py-12 md:min-h-[calc(88vh-72px)] md:px-8">
           <div className="max-w-4xl">
             <p className="mb-5 inline-flex max-w-full items-center gap-2 rounded-md border border-cobalt/20 bg-white/75 px-3 py-2 text-sm font-semibold text-cobalt backdrop-blur">
-              <Sparkles size={16} /> Caucasus travel concierge layer
+              <Sparkles size={16} /> Слой бронирования для путешествий по Кавказу
             </p>
             <h1 className="font-display text-4xl leading-[1.04] text-ink sm:text-5xl md:text-6xl">
-              871,7 тыс. гостей за 5 месяцев. Одна заявка вместо хаоса поездки.
+              Три года подряд Азербайджан принимает миллионы туристов без единой платформы бронирования.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
-              Свежий срез Госкомстата: Jan-May 2026, 186 стран, -11,0% к Jan-May 2025. Последний полный годовой baseline - 2,626,679 прибытий в 2024. Caspian UBook превращает жильё, гида, трансфер и поддержку в управляемый маршрут.
+              С 2023 года рынок доказал спрос: 2023 ≈ 2 086K прибытий, 2024 - 2 626 679 (+25,9%), Jan-May 2026 - 871,7K. Турист всё ещё собирает жильё, гида, трансфер и страховку вручную. Мы закрываем этот разрыв и зарабатываем на каждом шаге поездки.
             </p>
             <div className="mt-8 grid max-w-4xl gap-3 sm:grid-cols-3">
               {heroProof.map((item) => (
@@ -113,7 +112,7 @@ export function InvestorLanding() {
               ))}
             </div>
             <p className="mt-3 max-w-3xl text-xs leading-5 text-slate-500">
-              Официальные факты, расчёты и investor model разделены по смыслу, чтобы не смешивать статистику рынка с планом запуска.
+              Мы показываем три слоя цифр отдельно: что подтвердило государство, что мы посчитали сами и на что целимся. Так инвестор видит риск, а не рекламный лозунг.
             </p>
           </div>
         </div>
@@ -168,8 +167,8 @@ export function InvestorLanding() {
             <Image src="https://eurasia.travel/wp-content/uploads/2025/03/2.-Maiden-Tower-Baku.jpg" alt="Maiden Tower, Baku" fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/78 via-ink/20 to-transparent" />
             <div className="absolute bottom-0 max-w-xl p-6 text-white">
-              <p className="text-sm font-semibold uppercase text-white/75">Concierge-first platform</p>
-              <h2 className="mt-3 text-3xl font-semibold leading-tight md:text-4xl">Один интерфейс переводит хаос поездки в управляемую заявку.</h2>
+              <p className="text-sm font-semibold uppercase text-white/75">Платформа управляемой поездки</p>
+              <h2 className="mt-3 text-3xl font-semibold leading-tight md:text-4xl">Мы продаём не список услуг, а собранную поездку с ответственным исполнением.</h2>
             </div>
           </div>
           <div className="grid content-center gap-4">
@@ -190,12 +189,12 @@ export function InvestorLanding() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div className="max-w-3xl">
-              <p className="text-sm font-semibold uppercase text-cobalt">Market opportunity</p>
-              <h2 className="mt-3 text-3xl font-semibold leading-tight text-ink md:text-5xl">Рынок есть. Проблема не в спросе, а в том, что поездка распадается на разрозненные сервисы.</h2>
+              <p className="text-sm font-semibold uppercase text-cobalt">Рынок и разрыв</p>
+              <h2 className="mt-3 text-3xl font-semibold leading-tight text-ink md:text-5xl">Спрос уже есть. Деньги лежат в разрыве между туристом и локальными поставщиками.</h2>
             </div>
             <div className="glass-panel p-5">
-              <p className="text-sm font-semibold uppercase text-cobalt">короткий вывод</p>
-              <p className="mt-2 text-lg font-semibold leading-7 text-ink">Caspian UBook не продаёт “ещё один каталог”. Он закрывает операционный слой: собрать запрос, проверить партнёра, показать статус и довести поездку до исполнения.</p>
+              <p className="text-sm font-semibold uppercase text-cobalt">вывод для инвестора</p>
+              <p className="mt-2 text-lg font-semibold leading-7 text-ink">Caspian UBook берёт на себя то, что сегодня делает турист: собрать запрос, проверить партнёра, показать статус и довести поездку до исполнения. Именно здесь появляется выручка.</p>
             </div>
           </div>
 
@@ -221,10 +220,10 @@ export function InvestorLanding() {
           <div className="mt-8">
             <div className="mb-3 flex flex-col justify-between gap-2 md:flex-row md:items-end">
               <div>
-                <p className="text-sm font-semibold uppercase text-cobalt">Investor model</p>
-                <h3 className="mt-1 text-2xl font-semibold text-ink">Четыре цифры для разговора о масштабе, не вместо официальной статистики.</h3>
+                <p className="text-sm font-semibold uppercase text-cobalt">Инвесторская модель</p>
+                <h3 className="mt-1 text-2xl font-semibold text-ink">Факт, расчёт и цель разделены: так видно, где рынок уже подтверждён, а где начинается наша модель роста.</h3>
               </div>
-              <span className="rounded-md border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-semibold text-ink">model / target / official separated</span>
+              <span className="rounded-md border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-semibold text-ink">факт / модель / цель</span>
             </div>
             <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
               {investorModelMetrics.map((metric) => (
@@ -242,8 +241,8 @@ export function InvestorLanding() {
       <section id="competitive-position" className="scroll-mt-24 bg-white px-4 py-16 md:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-3xl">
-            <p className="text-sm font-semibold uppercase text-cobalt">Competitive position</p>
-            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Caspian UBook выигрывает не каталогом, а локальным support layer между туристом и поставщиком.</h2>
+            <p className="text-sm font-semibold uppercase text-cobalt">Конкурентная позиция</p>
+            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Booking и GetYourGuide продают список. Мы продаём результат: проверенного партнёра, понятный статус и человека, который ответит, если что-то пошло не так.</h2>
           </div>
           <div className="mt-8">
             <ResponsiveTable>
@@ -272,7 +271,7 @@ export function InvestorLanding() {
             </ResponsiveTable>
           </div>
           <p className="mt-5 rounded-md border border-cobalt/15 bg-cobalt/5 p-5 leading-7 text-slate-700">
-            Глобальные OTA начинают с каталога. Caspian UBook начинает с локального контекста на трёх языках, партнёрского процесса и поддержки - поэтому может стать операционным слоем поездки, а не ещё одной витриной. Локальные агентства работают сильнее в офлайне, но именно это оставляет место для управляемого digital flow.
+            В Азербайджане это преимущество нельзя скопировать за квартал, потому что оно строится на доверии локальных поставщиков, проверке качества и ручном fallback. Поэтому следующий вопрос не в том, есть ли рынок, а в том, как быстро проверить его в пилоте.
           </p>
         </div>
       </section>
@@ -280,8 +279,8 @@ export function InvestorLanding() {
       <section id="validation-customers" className="scroll-mt-24 bg-milk px-4 py-16 md:px-8">
         <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="glass-panel p-6">
-            <p className="text-sm font-semibold uppercase text-cobalt">Validation plan</p>
-            <h2 className="mt-3 text-3xl font-semibold text-ink">Что уже подготовлено к пилоту.</h2>
+            <p className="text-sm font-semibold uppercase text-cobalt">Проверка спроса</p>
+            <h2 className="mt-3 text-3xl font-semibold text-ink">Пилот должен доказать не интерес, а повторяемую экономику заявки.</h2>
             <div className="mt-6 grid gap-3">
               {validationItems.map((item) => (
                 <div key={item.title} className="rounded-md border border-slate-200 bg-white/75 p-4">
@@ -292,8 +291,8 @@ export function InvestorLanding() {
             </div>
           </div>
           <div className="glass-panel p-6">
-            <p className="text-sm font-semibold uppercase text-cobalt">Customers</p>
-            <h2 className="mt-3 text-3xl font-semibold text-ink">Три аудитории. Один интерфейс поездки.</h2>
+            <p className="text-sm font-semibold uppercase text-cobalt">Клиенты</p>
+            <h2 className="mt-3 text-3xl font-semibold text-ink">Один продукт проверяет три аудитории, но не смешивает их в одну гипотезу.</h2>
             <div className="mt-6 grid gap-3">
               {customerSegments.map((segment) => (
                 <div key={segment.title} className="rounded-md border border-slate-200 bg-white/75 p-4">
@@ -321,7 +320,7 @@ export function InvestorLanding() {
                 </div>
               </div>
               <p className="mt-5 leading-7 text-slate-700">
-                Раунд финансирует MVP, пилот, партнёрскую сеть, первые продажи и проверку unit economics. Деньги не тратятся на преждевременный запуск всех платформенных функций.
+                $520K хватает на 18 месяцев до подтверждённого PMF. Деньги идут не на рост любой ценой, а на 90 дней пилота, реальные цифры конверсии, NPS и удержания.
               </p>
               <div className="mt-5 grid gap-2">
                 {budgetSplit.map((item) => (
@@ -340,8 +339,8 @@ export function InvestorLanding() {
             </div>
             <div className="grid gap-4">
               <div className="glass-panel p-6">
-                <p className="text-sm font-semibold uppercase text-cobalt">Business model</p>
-                <h2 className="mt-3 text-3xl font-semibold text-ink">Экономика показана как pilot model: числа нужны для разговора о раунде, факт появится после 90 дней.</h2>
+                <p className="text-sm font-semibold uppercase text-cobalt">Бизнес-модель</p>
+                <h2 className="mt-3 text-3xl font-semibold text-ink">Экономика пока модельная. Пилот должен превратить её в факты по чеку, комиссии, повторной покупке и LTV/CAC.</h2>
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
                   {revenueStreams.map((stream) => (
                     <div key={stream.title} className="signal-card p-4">
@@ -366,7 +365,7 @@ export function InvestorLanding() {
             </div>
           </div>
 
-          <p className="mt-4 text-xs leading-5 text-slate-500">¹ Модельные цифры до пилота. Реальные значения фиксируются после 90-дневного sprint.</p>
+          <p className="mt-4 text-xs leading-5 text-slate-500">¹ Это модель до пилота. Реальные значения фиксируются после 90-дневной проверки спроса.</p>
 
           <div className="mt-6">
             <ResponsiveTable>
@@ -396,8 +395,8 @@ export function InvestorLanding() {
       <section id="risk-register" className="scroll-mt-24 bg-ceramic px-4 py-16 md:px-8">
         <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <p className="text-sm font-semibold uppercase text-cobalt">Risk register</p>
-            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Риски не скрываем. MVP построен, чтобы проверять их дешево.</h2>
+            <p className="text-sm font-semibold uppercase text-cobalt">Риски</p>
+            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Мы называем риски первыми, потому что инвестор всё равно их увидит. MVP построен так, чтобы каждый риск стоил недели, а не года.</h2>
           </div>
           <div className="grid gap-3">
             {investorRisks.map((item) => (
@@ -408,7 +407,7 @@ export function InvestorLanding() {
                 </div>
                 <p className="mt-3 text-sm leading-6 text-slate-600">{item.risk}</p>
                 <p className="mt-3 rounded-md bg-white/75 p-3 text-sm leading-6 text-slate-700">
-                  <span className="font-semibold text-cobalt">Митигация: </span>
+                  <span className="font-semibold text-cobalt">Как закрываем: </span>
                   {item.mitigation}
                 </p>
               </article>
@@ -421,8 +420,8 @@ export function InvestorLanding() {
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
-              <p className="text-sm font-semibold uppercase text-cobalt">Implementation roadmap</p>
-              <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">От MVP к транзакционной платформе через проверяемые этапы.</h2>
+              <p className="text-sm font-semibold uppercase text-cobalt">План реализации</p>
+              <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Мы масштабируем только то, что прошло проверку спросом, договорами и удержанием.</h2>
             </div>
             <Link href="/stages" className="inline-flex items-center gap-2 rounded-md bg-ink px-5 py-3 font-semibold text-white transition hover:bg-cobalt">
               Этапы реализации <ArrowRight size={18} />
@@ -440,11 +439,11 @@ export function InvestorLanding() {
           <div className="mt-8 rounded-md border border-cobalt/15 bg-cobalt/5 p-5">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
-                <p className="flex items-center gap-2 text-sm font-semibold uppercase text-cobalt"><Target size={16} /> PMF rule</p>
-                <p className="mt-2 max-w-3xl leading-7 text-slate-700">Переход к оплатам, API, mobile, Telegram и B2B делается только после пилотных данных: заявок, конверсии, NPS, повторного спроса и юридически готовых партнёрских договоров.</p>
+                <p className="flex items-center gap-2 text-sm font-semibold uppercase text-cobalt"><Target size={16} /> Правило PMF</p>
+                <p className="mt-2 max-w-3xl leading-7 text-slate-700">К оплатам, API, mobile, Telegram и B2B переходим только после пилотных данных: заявок, конверсии, NPS, повторного спроса и юридически готовых партнёрских договоров.</p>
               </div>
               <Link href="/developers" className="inline-flex shrink-0 items-center gap-2 rounded-md border border-cobalt/20 bg-white px-4 py-2 font-semibold text-cobalt transition hover:bg-cobalt hover:text-white">
-                Dev spec <BarChart3 size={18} />
+                Техспецификация <BarChart3 size={18} />
               </Link>
             </div>
           </div>
@@ -455,14 +454,14 @@ export function InvestorLanding() {
         <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.86fr_1.14fr]">
           <div className="glass-panel relative overflow-hidden p-6">
             <div className="absolute -bottom-16 -right-12 h-40 w-40 rounded-full bg-cobalt/10 blur-3xl" />
-            <p className="text-sm font-semibold uppercase text-cobalt">Why now</p>
-            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Сейчас совпали поток, локальные маршруты и потребность в управляемой поездке.</h2>
+            <p className="text-sm font-semibold uppercase text-cobalt">Почему сейчас</p>
+            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Рынок уже вырос, но инфраструктура поездки не успела за ним.</h2>
             <p className="mt-5 text-sm leading-6 text-slate-600">
-              Азербайджан уже видит международный поток и гостиничную активность. Следующий шаг - единый цифровой слой между туристом и локальными поставщиками.
+              Поэтому Caspian UBook запускается не как ставка на будущий спрос, а как ответ на уже существующую координационную боль.
             </p>
             <div className="relative mt-6 rounded-md border border-cobalt/15 bg-white/70 p-4">
-              <p className="text-xs font-semibold uppercase text-slate-500">timing thesis</p>
-              <p className="mt-2 text-2xl font-semibold text-ink">Local-first быстрее глобального каталога там, где важны язык, доверие и ручной fallback.</p>
+              <p className="text-xs font-semibold uppercase text-slate-500">тезис момента</p>
+              <p className="mt-2 text-2xl font-semibold text-ink">Локальная операционная модель быстрее глобального каталога там, где важны язык, доверие и ручная подстраховка.</p>
             </div>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">

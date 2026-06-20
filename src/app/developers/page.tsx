@@ -36,7 +36,6 @@ const developerSectionActions = [
   { href: "/", label: "Для инвестора" },
   { href: "#glossary", label: "Глоссарий" },
   { href: "https://caspian-ubook-mvp.lovable.app/app.html", label: "Дизайн-макет", external: true },
-  { href: "https://t.me/USERNAME", label: "Связаться", external: true },
 ];
 
 function SectionTitle({ eyebrow, title, text }: { eyebrow: string; title: string; text?: string }) {
