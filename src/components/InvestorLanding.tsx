@@ -50,7 +50,7 @@ const investorSectionActions = [
   { href: "/assets/caspian-ubook-presentation.pdf", label: "Скачать презентацию", download: true },
   { href: "/developers", label: "Для разработчиков" },
   { href: "/stages", label: "Этапы реализации" },
-  { href: "https://caspian-ubook-mvp.lovable.app/app.html", label: "Дизайн-макет", external: true },
+  { href: "https://caspian-ubook.lovable.app/", label: "Дизайн-макет", external: true },
 ];
 
 function ResponsiveTable({ children }: { children: ReactNode }) {

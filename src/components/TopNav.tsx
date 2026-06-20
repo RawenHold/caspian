@@ -46,7 +46,7 @@ export function TopNav({ active = "investor" }: TopNavProps) {
             </Link>
           </div>
           <a
-            href="https://caspian-ubook-mvp.lovable.app/app.html"
+            href="https://caspian-ubook.lovable.app/"
             target="_blank"
             rel="noreferrer"
             className="inline-flex min-h-11 shrink-0 items-center justify-center gap-1 rounded-[8px] border border-cobalt/20 bg-white/84 px-3 text-xs font-bold text-cobalt shadow-[0_14px_40px_rgba(34,48,89,0.08)] backdrop-blur-xl transition hover:border-cobalt/40 hover:bg-white"
@@ -80,7 +80,7 @@ export function TopNav({ active = "investor" }: TopNavProps) {
             </Link>
           </div>
           <a
-            href="https://caspian-ubook-mvp.lovable.app/app.html"
+            href="https://caspian-ubook.lovable.app/"
             target="_blank"
             rel="noreferrer"
             className="hidden whitespace-nowrap items-center gap-2 rounded-md border border-cobalt/20 bg-white/80 px-4 py-2 text-sm font-semibold text-cobalt transition hover:border-cobalt/40 hover:bg-white lg:inline-flex"
