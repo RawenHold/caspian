@@ -10,14 +10,6 @@ export const marketSnapshot = [
   { label: "SOM", value: "~$6.7-12M", title: "Чистая выручка 5-й год", text: "Модель: 2% доля рынка, комиссия и премиальные дополнительные продажи." },
 ];
 
-export const investorModelMetrics = [
-  { value: "$1.56B", label: "TAM · official inbound revenue", note: "факт 2024; источник: State Statistical Committee / Tourism Agency of Azerbaijan" },
-  { value: "$608M", label: "SAM · online-accessible TAM", note: "средний сценарий внутри benchmark 25-45% онлайн-бронирований" },
-  { value: "2%", label: "target market share", note: "доля онлайн-доступного рынка в сценарии 5-го года" },
-  { value: "~$6.7-12M", label: "SOM · net revenue Y5", note: "чистая выручка после комиссии и premium add-ons" },
-  { value: "694.2M AZN", label: "hotel revenue 2024", note: "отдельный hotel under-layer, не альтернативный TAM" },
-];
-
 export const marketProofNotes = [
   "TAM $1.56B берём как официальный денежный слой въездного туризма, без синтетических GMV-допущений.",
   "SAM $608M — средний сценарий онлайн-доступной части TAM внутри benchmark 25-45%.",

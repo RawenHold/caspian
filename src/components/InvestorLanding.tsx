@@ -16,7 +16,6 @@ import {
   budgetSplit,
   competitorRows,
   customerSegments,
-  investorModelMetrics,
   financialScenarios,
   heroProof,
   investorRisks,
@@ -217,24 +216,6 @@ export function InvestorLanding() {
             ))}
           </div>
 
-          <div className="mt-8">
-            <div className="mb-3 flex flex-col justify-between gap-2 md:flex-row md:items-end">
-              <div>
-                <p className="text-sm font-semibold uppercase text-cobalt">Инвесторская модель</p>
-                <h3 className="mt-1 text-2xl font-semibold text-ink">Финансовая модель читается в одну цепочку: TAM → SAM → 2% market share → SOM.</h3>
-              </div>
-              <span className="rounded-md border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-semibold text-ink">TAM / SAM / 2% share / SOM</span>
-            </div>
-            <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
-              {investorModelMetrics.map((metric) => (
-                <article key={metric.label} className="rounded-md border border-slate-200 bg-white p-4 shadow-[0_14px_44px_rgba(34,48,89,0.07)]">
-                  <p className="text-3xl font-semibold text-ink">{metric.value}</p>
-                  <p className="mt-2 font-semibold text-slate-700">{metric.label}</p>
-                  <p className="mt-2 text-xs leading-5 text-slate-500">{metric.note}</p>
-                </article>
-              ))}
-            </div>
-          </div>
         </div>
       </section>
 
