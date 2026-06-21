@@ -194,7 +194,7 @@ export function InvestorLanding() {
             </div>
             <div className="glass-panel p-5">
               <p className="text-sm font-semibold uppercase text-cobalt">вывод для инвестора</p>
-              <p className="mt-2 text-lg font-semibold leading-7 text-ink">Основной TAM — $1.56B официальных доходов от въездного туризма. SAM считаем диапазоном 25-45%, SOM — через явный capture rate 0.5% и take rate 10%.</p>
+              <p className="mt-2 text-lg font-semibold leading-7 text-ink">Основной TAM — $1.56B официальных доходов от въездного туризма. SAM — $608M онлайн-доступной доли, SOM 5-го года — ~$6.7-12M чистой выручки.</p>
             </div>
           </div>
 
@@ -221,9 +221,9 @@ export function InvestorLanding() {
             <div className="mb-3 flex flex-col justify-between gap-2 md:flex-row md:items-end">
               <div>
                 <p className="text-sm font-semibold uppercase text-cobalt">Инвесторская модель</p>
-                <h3 className="mt-1 text-2xl font-semibold text-ink">Финансовая модель теперь читается в одну цепочку: TAM → SAM → capture rate → SOM.</h3>
+                <h3 className="mt-1 text-2xl font-semibold text-ink">Финансовая модель читается в одну цепочку: TAM → SAM → 2% market share → SOM.</h3>
               </div>
-              <span className="rounded-md border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-semibold text-ink">TAM / SAM / capture / SOM</span>
+              <span className="rounded-md border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-semibold text-ink">TAM / SAM / 2% share / SOM</span>
             </div>
             <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
               {investorModelMetrics.map((metric) => (

@@ -29,10 +29,10 @@ export const marketCards = [
   },
   {
     label: "Launch model 2026",
-    value: "3.5M",
-    detail: "Deck model for launch-window planning",
+    value: "~$6.7-12M",
+    detail: "SOM net revenue, year 5",
     source: "model",
-    note: "Internal model assumption, not official tourism forecast.",
+    note: "Model: 2% market share, commission and premium add-ons.",
   },
   {
     label: "TAM · official inbound revenue",
@@ -58,6 +58,6 @@ export const marketSources = [
   "Official: State Statistical Committee tourism XLS updated 04.06.2026 - annual country table currently ends at 2.6267M arrivals in 2024.",
   "Official: State Statistical Committee of Azerbaijan, Activities of hotels and similar establishments in 2024, 27.01.2025 - 4.2828M hotel nights and 694.2M AZN hotel revenue.",
   "Official: COP29 was held in Baku in November 2024; the site uses it as visibility context, not as quantified tourism uplift.",
-  "Model: SAM uses 25-45% online penetration benchmark, capture rate target is 0.5%, SOM Y5 is $3.5M net revenue.",
+  "Model: SAM is $608M as the online-accessible share of TAM; SOM Y5 is ~$6.7-12M net revenue from 2% market share, commission and premium add-ons.",
   "Provider/legal: PSP, mobile wallet and Technopark benefits are roadmap inputs and require provider confirmation, contracts and legal review.",
 ];

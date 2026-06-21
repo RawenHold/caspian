@@ -5,23 +5,23 @@ export const heroProof = [
 ];
 
 export const marketSnapshot = [
-  { label: "TAM · факт 2024", value: "$1.56B", title: "inbound tourism revenue", text: "Основной TAM берём из официальных доходов от въездного туризма. Это денежная база рынка, а не синтетическая формула на одного туриста." },
-  { label: "SAM · sensitivity", value: "$390M-$702M", title: "25-45% online share", text: "25-45% — общий benchmark развивающихся рынков. Это не AZ-статистика, поэтому базовый сценарий читаем как диапазон." },
-  { label: "SOM · Y5", value: "$3.5M", title: "0.5% capture × 10% take rate", text: "Доля захвата до 0.5% от SAM делает цепочку TAM → SAM → SOM воспроизводимой без скрытых допущений." },
+  { label: "TAM", value: "$1.56B", title: "Официальные доходы от въездного туризма 2024", text: "2.63M туристов × $514 средний чек поездки. Берём как денежную базу рынка." },
+  { label: "SAM", value: "$608M", title: "Онлайн-доступная доля TAM", text: "Среднее проникновение онлайн-бронирований в туризме на развивающихся рынках составляет около 25-45%." },
+  { label: "SOM", value: "~$6.7-12M", title: "Чистая выручка 5-й год", text: "Модель: 2% доля рынка, комиссия и премиальные дополнительные продажи." },
 ];
 
 export const investorModelMetrics = [
   { value: "$1.56B", label: "TAM · official inbound revenue", note: "факт 2024; источник: State Statistical Committee / Tourism Agency of Azerbaijan" },
-  { value: "$390M-$702M", label: "SAM · online-bookable range", note: "25-45% benchmark для развивающихся рынков; не прямые AZ-данные" },
-  { value: "0.5%", label: "Y5 capture rate", note: "явное допущение между SAM и SOM, чтобы модель читалась без скрытой математики" },
-  { value: "$3.5M", label: "SOM · net revenue Y5", note: "согласовано с Y3 revenue path: это нижний край $3.5M-$5M, а не отдельный конфликтующий прогноз" },
+  { value: "$608M", label: "SAM · online-accessible TAM", note: "средний сценарий внутри benchmark 25-45% онлайн-бронирований" },
+  { value: "2%", label: "target market share", note: "доля онлайн-доступного рынка в сценарии 5-го года" },
+  { value: "~$6.7-12M", label: "SOM · net revenue Y5", note: "чистая выручка после комиссии и premium add-ons" },
   { value: "694.2M AZN", label: "hotel revenue 2024", note: "отдельный hotel under-layer, не альтернативный TAM" },
 ];
 
 export const marketProofNotes = [
   "TAM $1.56B берём как официальный денежный слой въездного туризма, без синтетических GMV-допущений.",
-  "SAM показан диапазоном 25-45%, потому что прямой AZ-доли онлайн-бронирований нет.",
-  "SOM $3.5M строится через capture rate 0.5% и take rate 10%; hotel revenue 694.2M AZN остаётся отдельным слоем.",
+  "SAM $608M — средний сценарий онлайн-доступной части TAM внутри benchmark 25-45%.",
+  "SOM ~$6.7-12M строится от 2% market share, комиссии и premium add-ons; hotel revenue 694.2M AZN остаётся отдельным слоем.",
 ];
 
 export const problemJourney = {
