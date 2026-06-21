@@ -35,11 +35,11 @@ export const marketCards = [
     note: "Internal model assumption, not official tourism forecast.",
   },
   {
-    label: "TAM GMV model",
-    value: "$4.2B",
-    detail: "3.5M modeled travelers x $1,200 average trip spend",
+    label: "TAM · official inbound revenue",
+    value: "$1.56B",
+    detail: "Official inbound tourism revenue, 2024",
     source: "model",
-    note: "Investor model input; actual GMV depends on conversion, partners and payment readiness.",
+    note: "Primary TAM layer; source should be cited as State Statistical Committee / Tourism Agency of Azerbaijan.",
   },
 ];
 
@@ -58,6 +58,6 @@ export const marketSources = [
   "Official: State Statistical Committee tourism XLS updated 04.06.2026 - annual country table currently ends at 2.6267M arrivals in 2024.",
   "Official: State Statistical Committee of Azerbaijan, Activities of hotels and similar establishments in 2024, 27.01.2025 - 4.2828M hotel nights and 694.2M AZN hotel revenue.",
   "Official: COP29 was held in Baku in November 2024; the site uses it as visibility context, not as quantified tourism uplift.",
-  "Model: 3.5M, 6.0M, $4.2B TAM and $40M SOM are investor model assumptions/targets, not official market facts.",
+  "Model: SAM uses 25-45% online penetration benchmark, capture rate target is 0.5%, SOM Y5 is $3.5M net revenue.",
   "Provider/legal: PSP, mobile wallet and Technopark benefits are roadmap inputs and require provider confirmation, contracts and legal review.",
 ];

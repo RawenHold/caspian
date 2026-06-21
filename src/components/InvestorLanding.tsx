@@ -35,15 +35,15 @@ import { PresentationCta } from "./PresentationCta";
 import { SideSectionNav } from "./SideSectionNav";
 
 const investorSectionNav = [
-  { href: "#investor-problem", label: "Проблема туриста" },
-  { href: "#market-opportunity", label: "Рынок и возможность" },
-  { href: "#competitive-position", label: "Конкурентная позиция" },
-  { href: "#validation-customers", label: "Пилот и клиенты" },
-  { href: "#seed-business-model", label: "Раунд и бизнес-модель" },
-  { href: "#risk-register", label: "Карта рисков" },
-  { href: "#implementation-roadmap", label: "Дорожная карта" },
+  { href: "#investor-problem", label: "Проблема" },
+  { href: "#market-opportunity", label: "Рынок" },
+  { href: "#competitive-position", label: "Конкуренты" },
+  { href: "#validation-customers", label: "Клиенты" },
+  { href: "#seed-business-model", label: "Раунд" },
+  { href: "#risk-register", label: "Риски" },
+  { href: "#implementation-roadmap", label: "Roadmap" },
   { href: "#why-now", label: "Почему сейчас" },
-  { href: "#investor-room", label: "Комната инвестора" },
+  { href: "#investor-room", label: "Deck" },
 ];
 
 const investorSectionActions = [
@@ -94,13 +94,13 @@ export function InvestorLanding() {
         <div className="relative mx-auto grid min-h-[calc(88vh-112px)] max-w-7xl content-center px-4 py-12 md:min-h-[calc(88vh-72px)] md:px-8">
           <div className="max-w-4xl">
             <p className="mb-5 inline-flex max-w-full items-center gap-2 rounded-md border border-cobalt/20 bg-white/75 px-3 py-2 text-sm font-semibold text-cobalt backdrop-blur">
-              <Sparkles size={16} /> Слой бронирования для путешествий по Кавказу
+              <Sparkles size={16} /> AI travel консьерж для Азербайджана
             </p>
             <h1 className="font-display text-4xl leading-[1.04] text-ink sm:text-5xl md:text-6xl">
               Три года подряд Азербайджан принимает миллионы туристов без единой платформы бронирования.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700 md:text-xl">
-              С 2023 года рынок доказал спрос: 2023 ≈ 2 086K прибытий, 2024 - 2 626 679 (+25,9%), Jan-May 2026 - 871,7K. Турист всё ещё собирает жильё, гида, трансфер и страховку вручную. Мы закрываем этот разрыв и зарабатываем на каждом шаге поездки.
+              Стартуем с 3 core-сценариев: жильё, гиды/туры и логистика. Затем расширяем платформу до 12+ вертикалей: визы, HoReCA, страховка, финтех, события, shopping, SOS, перевод и AI-консьерж.
             </p>
             <div className="mt-8 grid max-w-4xl gap-3 sm:grid-cols-3">
               {heroProof.map((item) => (
@@ -112,7 +112,7 @@ export function InvestorLanding() {
               ))}
             </div>
             <p className="mt-3 max-w-3xl text-xs leading-5 text-slate-500">
-              Мы показываем три слоя цифр отдельно: что подтвердило государство, что мы посчитали сами и на что целимся. Так инвестор видит риск, а не рекламный лозунг.
+              Цифры ниже разделены просто: факт, расчёт и цель. Так TAM/SAM/SOM читаются без скрытой математики.
             </p>
           </div>
         </div>
@@ -190,11 +190,11 @@ export function InvestorLanding() {
           <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold uppercase text-cobalt">Рынок и разрыв</p>
-              <h2 className="mt-3 text-3xl font-semibold leading-tight text-ink md:text-5xl">Спрос уже есть. Деньги лежат в разрыве между туристом и локальными поставщиками.</h2>
+              <h2 className="mt-3 text-3xl font-semibold leading-tight text-ink md:text-5xl">Размер ниши считаем через проверяемые слои: факт, онлайн-доля и доля захвата.</h2>
             </div>
             <div className="glass-panel p-5">
               <p className="text-sm font-semibold uppercase text-cobalt">вывод для инвестора</p>
-              <p className="mt-2 text-lg font-semibold leading-7 text-ink">Caspian UBook берёт на себя то, что сегодня делает турист: собрать запрос, проверить партнёра, показать статус и довести поездку до исполнения. Именно здесь появляется выручка.</p>
+              <p className="mt-2 text-lg font-semibold leading-7 text-ink">Основной TAM — $1.56B официальных доходов от въездного туризма. SAM считаем диапазоном 25-45%, SOM — через явный capture rate 0.5% и take rate 10%.</p>
             </div>
           </div>
 
@@ -221,9 +221,9 @@ export function InvestorLanding() {
             <div className="mb-3 flex flex-col justify-between gap-2 md:flex-row md:items-end">
               <div>
                 <p className="text-sm font-semibold uppercase text-cobalt">Инвесторская модель</p>
-                <h3 className="mt-1 text-2xl font-semibold text-ink">Факт, расчёт и цель разделены: так видно, где рынок уже подтверждён, а где начинается наша модель роста.</h3>
+                <h3 className="mt-1 text-2xl font-semibold text-ink">Финансовая модель теперь читается в одну цепочку: TAM → SAM → capture rate → SOM.</h3>
               </div>
-              <span className="rounded-md border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-semibold text-ink">факт / модель / цель</span>
+              <span className="rounded-md border border-gold/30 bg-gold/10 px-3 py-1 text-xs font-semibold text-ink">TAM / SAM / capture / SOM</span>
             </div>
             <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
               {investorModelMetrics.map((metric) => (
@@ -280,7 +280,7 @@ export function InvestorLanding() {
         <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="glass-panel p-6">
             <p className="text-sm font-semibold uppercase text-cobalt">Проверка спроса</p>
-            <h2 className="mt-3 text-3xl font-semibold text-ink">Пилот должен доказать не интерес, а повторяемую экономику заявки.</h2>
+            <h2 className="mt-3 text-3xl font-semibold text-ink">Пилот проверяет PMF, партнёров и первые 1 000+ заявок.</h2>
             <div className="mt-6 grid gap-3">
               {validationItems.map((item) => (
                 <div key={item.title} className="rounded-md border border-slate-200 bg-white/75 p-4">
@@ -292,7 +292,7 @@ export function InvestorLanding() {
           </div>
           <div className="glass-panel p-6">
             <p className="text-sm font-semibold uppercase text-cobalt">Клиенты</p>
-            <h2 className="mt-3 text-3xl font-semibold text-ink">Один продукт проверяет три аудитории, но не смешивает их в одну гипотезу.</h2>
+            <h2 className="mt-3 text-3xl font-semibold text-ink">Три клиента, один интерфейс: премиальный отдых, MICE и внутренний туризм.</h2>
             <div className="mt-6 grid gap-3">
               {customerSegments.map((segment) => (
                 <div key={segment.title} className="rounded-md border border-slate-200 bg-white/75 p-4">
@@ -320,7 +320,7 @@ export function InvestorLanding() {
                 </div>
               </div>
               <p className="mt-5 leading-7 text-slate-700">
-                $520K хватает на 18 месяцев до подтверждённого PMF. Деньги идут не на рост любой ценой, а на 90 дней пилота, реальные цифры конверсии, NPS и удержания.
+                $520K дают 18 месяцев runway: Phase 1, PMF sprint, MVP launch и подготовка к SuperApp scale.
               </p>
               <div className="mt-5 grid gap-2">
                 {budgetSplit.map((item) => (
@@ -340,7 +340,7 @@ export function InvestorLanding() {
             <div className="grid gap-4">
               <div className="glass-panel p-6">
                 <p className="text-sm font-semibold uppercase text-cobalt">Бизнес-модель</p>
-                <h2 className="mt-3 text-3xl font-semibold text-ink">Экономика пока модельная. Пилот должен превратить её в факты по чеку, комиссии, повторной покупке и LTV/CAC.</h2>
+                <h2 className="mt-3 text-3xl font-semibold text-ink">Четыре источника выручки и unit economics сверены с питчдеком: CAC, LTV, LTV/CAC и gross margin подтверждаем пилотом.</h2>
                 <div className="mt-6 grid gap-3 sm:grid-cols-2">
                   {revenueStreams.map((stream) => (
                     <div key={stream.title} className="signal-card p-4">
@@ -365,7 +365,7 @@ export function InvestorLanding() {
             </div>
           </div>
 
-          <p className="mt-4 text-xs leading-5 text-slate-500">¹ Это модель до пилота. Реальные значения фиксируются после 90-дневной проверки спроса.</p>
+          <p className="mt-4 text-xs leading-5 text-slate-500">¹ CAC/LTV, валовая маржа и прогноз выручки подтверждаются через пилот, retention и платную конверсию.</p>
 
           <div className="mt-6">
             <ResponsiveTable>
@@ -421,7 +421,7 @@ export function InvestorLanding() {
           <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
             <div>
               <p className="text-sm font-semibold uppercase text-cobalt">План реализации</p>
-              <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Мы масштабируем только то, что прошло проверку спросом, договорами и удержанием.</h2>
+              <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">18 месяцев до Series A: сначала PMF, затем MVP, затем 12 вертикалей и региональная экспансия.</h2>
             </div>
             <Link href="/stages" className="inline-flex items-center gap-2 rounded-md bg-ink px-5 py-3 font-semibold text-white transition hover:bg-cobalt">
               Этапы реализации <ArrowRight size={18} />
@@ -440,7 +440,7 @@ export function InvestorLanding() {
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
                 <p className="flex items-center gap-2 text-sm font-semibold uppercase text-cobalt"><Target size={16} /> Правило PMF</p>
-                <p className="mt-2 max-w-3xl leading-7 text-slate-700">К оплатам, API, mobile, Telegram и B2B переходим только после пилотных данных: заявок, конверсии, NPS, повторного спроса и юридически готовых партнёрских договоров.</p>
+                <p className="mt-2 max-w-3xl leading-7 text-slate-700">PMF подтверждаем повторным спросом, NPS, retention и платной конверсией. Только после этого расширяем API, B2B и платежный слой.</p>
               </div>
               <Link href="/developers" className="inline-flex shrink-0 items-center gap-2 rounded-md border border-cobalt/20 bg-white px-4 py-2 font-semibold text-cobalt transition hover:bg-cobalt hover:text-white">
                 Техспецификация <BarChart3 size={18} />
@@ -455,13 +455,13 @@ export function InvestorLanding() {
           <div className="glass-panel relative overflow-hidden p-6">
             <div className="absolute -bottom-16 -right-12 h-40 w-40 rounded-full bg-cobalt/10 blur-3xl" />
             <p className="text-sm font-semibold uppercase text-cobalt">Почему сейчас</p>
-            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Рынок уже вырос, но инфраструктура поездки не успела за ним.</h2>
+            <h2 className="mt-3 text-4xl font-semibold leading-tight text-ink md:text-5xl">Окно открыто: государство усилило видимость страны, а цифровой слой бронирования ещё не сформирован.</h2>
             <p className="mt-5 text-sm leading-6 text-slate-600">
-              Поэтому Caspian UBook запускается не как ставка на будущий спрос, а как ответ на уже существующую координационную боль.
+              Начинаем с Азербайджана, затем масштабируем модель на Южный Кавказ и Каспийский регион.
             </p>
             <div className="relative mt-6 rounded-md border border-cobalt/15 bg-white/70 p-4">
               <p className="text-xs font-semibold uppercase text-slate-500">тезис момента</p>
-              <p className="mt-2 text-2xl font-semibold text-ink">Локальная операционная модель быстрее глобального каталога там, где важны язык, доверие и ручная подстраховка.</p>
+              <p className="mt-2 text-2xl font-semibold text-ink">Смысл момента: спрос уже есть, партнёрская сеть ещё формируется, а локальный AI может стать точкой входа раньше глобальных игроков.</p>
             </div>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
