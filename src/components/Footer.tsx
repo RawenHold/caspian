@@ -3,16 +3,17 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-ink px-4 py-12 text-white md:px-8">
-      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.2fr_0.8fr]">
+      <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.1fr_0.7fr_0.9fr]">
         <div>
           <h2 className="text-2xl font-semibold">Caspian UBook</h2>
           <p className="mt-3 max-w-md text-sm leading-6 text-white/70">
-            Investor landing + developer specification for an Azerbaijan travel concierge platform. MVP проверяет спрос, Post-MVP расширяет сервисы после данных и договоров.
+            Investor landing + developer specification for an Azerbaijan travel concierge platform. MVP проверяет спрос, Post-MVP расширяет сервисы после данных пилота, договоров и legal readiness.
           </p>
           <p className="mt-3 max-w-md text-xs leading-5 text-white/45">
             Hero photo: AlixSaz / Wikimedia Commons, CC BY-SA 4.0.
           </p>
         </div>
+
         <div>
           <h3 className="font-semibold">Разделы</h3>
           <div className="mt-3 grid gap-2 text-sm text-white/70">
@@ -20,6 +21,16 @@ export function Footer() {
             <Link href="/developers" className="transition hover:text-white">Для разработчиков</Link>
             <Link href="/stages" className="transition hover:text-white">Этапы реализации</Link>
             <a href="/assets/caspian-ubook-presentation.pdf" target="_blank" rel="noreferrer" className="transition hover:text-white">Презентация PDF</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="font-semibold">Контакты</h3>
+          <div className="mt-3 grid gap-2 text-sm leading-6 text-white/70">
+            <p>Телефон: +998 97 545 33 33</p>
+            <p>Email: laz.dmitriy@gmail.com</p>
+            <p>Telegram: <a href="https://t.me/LazDmitriy" target="_blank" rel="noreferrer" className="transition hover:text-white">@LazDmitriy</a></p>
+            <p>Локация: Baku, Azerbaijan</p>
           </div>
         </div>
       </div>
