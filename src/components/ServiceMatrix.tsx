@@ -9,9 +9,9 @@ import { StatusBadge } from "./StatusBadge";
 const filters: { label: string; value: "all" | ServiceStatus }[] = [
   { label: "Все", value: "all" },
   { label: "Работает в MVP", value: "functional" },
-  { label: "Support / ссылка", value: "assisted" },
-  { label: "Информация сейчас", value: "informational" },
-  { label: "После MVP", value: "post" },
+  { label: "Поддержка / ссылка", value: "assisted" },
+  { label: "Актуальная инофрмация", value: "informational" },
+  { label: "Реализация после MVP", value: "post" },
 ];
 
 const statusPurpose: Record<ServiceStatus, string> = {
@@ -46,10 +46,10 @@ export function ServiceMatrix() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <p className="text-sm font-semibold uppercase text-cobalt">Карта статусов услуг</p>
-            <h2 className="mt-3 text-3xl font-semibold leading-tight text-ink">Фильтр показывает, что реально входит в MVP.</h2>
+            <p className="text-sm font-semibold uppercase text-cobalt">Статус карты услуг</p>
+            <h2 className="mt-3 text-3xl font-semibold leading-tight text-ink">Фильтр по MVP.</h2>
             <p className="mt-4 leading-7 text-slate-700">
-              Разработчик сразу видит: какую услугу строим как полноценный сценарий, какую закрываем через support, где пока только контент, а что переносим после проверки рынка.
+              Показано, что реализуем сейчас, что закрываем поддержкой клиентов и что проверим позже.
             </p>
             <div className="mt-5 grid gap-2">
               {(Object.keys(statusMeta) as ServiceStatus[]).map((status) => (
