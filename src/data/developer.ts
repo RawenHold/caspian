@@ -20,7 +20,7 @@ export const architectureNotes = [
 ];
 
 export const azDevContext = [
-  { title: "Платёжный контур", value: "Phase 10", text: "Фазы 0-7: MVP поддерживает базовые онлайн-платежи. Возможно Epoint, Kapital Bank, PASHA, MilliKart, Portmanat, m10/Birbank. Apple Pay/Google Pay - после provider verification, договоров и legal/KYB." },
+  { title: "Платёжный контур", value: "Phase 10", text: "Фазы 0-7: MVP поддерживает базовые онлайн-платежи. Возможно Epoint, Kapital Bank, PASHA, MilliKart, Portmanat, m10/Birbank. Apple Pay/Google Pay - после проверки поставщика, договоров и legal/KYB." },
   { title: "Языки", value: "az / ru / en", text: "az для локального UI и партнёрских шаблонов, ru для крупного source-market потока, en для международной аудитории и B2B. Реализация через locale-файлы." },
   { title: "Юридическое и налоговое", value: "legal review", text: "Technopark/tax status, персональные данные и согласия туристов учитываются только после legal review. Audit log обязателен для access/status/support actions." },
   { title: "Local dev ecosystem", value: "Baku", text: "Hiring/context из промпта: Technopark Baku, ADA University, BHOS, SABAH.city, InMerge Innovation Summit, Baku ID. Зарплатные вилки - model input." },
