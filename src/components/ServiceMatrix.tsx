@@ -9,16 +9,16 @@ import { StatusBadge } from "./StatusBadge";
 const filters: { label: string; value: "all" | ServiceStatus }[] = [
   { label: "Все", value: "all" },
   { label: "Работает в MVP", value: "functional" },
-  { label: "Поддержка / ссылка", value: "assisted" },
+  { label: "Через поддержку / ссылку", value: "assisted" },
   { label: "Актуальная инофрмация", value: "informational" },
   { label: "Реализация после MVP", value: "post" },
 ];
 
 const statusPurpose: Record<ServiceStatus, string> = {
-  functional: "Форма + заявка + admin/support + статус.",
-  assisted: "Deep link или assisted flow без полного движка.",
-  informational: "Контент + спрос. Бронирование не обещаем.",
-  post: "Только после пилота, договоров и legal review.",
+  functional: "Может быть реализовано через форму, заявку, поддержку и статусы обработки.",
+  assisted: "Закрываем через ссылку, заявку или поддержку — без полноценного функционала.",
+  informational: "Даём информацию и проверяем спрос. Бронирование в MVP не предусмотрено.",
+  post: "После MVP: по итогам пилота и юридической подготовки.",
 };
 
 const statusTone: Record<ServiceStatus, string> = {
@@ -46,7 +46,7 @@ export function ServiceMatrix() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr]">
           <div>
-            <p className="text-sm font-semibold uppercase text-cobalt">Статус карты услуг</p>
+            <p className="text-sm font-semibold uppercase text-cobalt">Карта статусов услуг</p>
             <h2 className="mt-3 text-3xl font-semibold leading-tight text-ink">Фильтр по MVP.</h2>
             <p className="mt-4 leading-7 text-slate-700">
               Показано, что реализуем сейчас, что закрываем поддержкой клиентов и что проверим позже.
