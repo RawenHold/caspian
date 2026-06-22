@@ -24,7 +24,7 @@ export function PresentationCta({ compact = false }: { compact?: boolean }) {
                 <span className="rounded-full border border-cobalt/20 bg-cobalt/5 px-3 py-1 text-sm font-semibold text-cobalt">Seed $520K</span>
               </div>
               <p className="mt-4 max-w-sm text-base leading-7 text-slate-600">
-                Прямой контакт и investor deck для первого разговора по раунду и пилоту.
+                Связаться с нами для обсуждения MVP проекта.
               </p>
             </div>
           </div>
