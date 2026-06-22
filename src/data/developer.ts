@@ -10,7 +10,7 @@ export const techStack = [
   { layer: "Infra", value: "Docker Compose -> staging -> production", note: "Dev и staging обязательны.", why: "Production только после 48 часов staging без critical bugs." },
   { layer: "CI/CD", value: "GitHub Actions", note: "Lint, typecheck, tests, build, migrations и staging deploy.", why: "Каждая задача проходит один и тот же predictable path: PR -> review -> tests -> staging -> accept." },
   { layer: "Monitoring", value: "Error + product analytics", note: "Sentry/PostHog-compatible monitoring без утечки персональных данных.", why: "Нужны ошибки, funnel events, support load и PMF dashboard." },
-  { layer: "Payments MVP", value: "Manual payment record -> PSP shortlist", note: "В MVP нет auto-checkout; Phase 10 готовит Epoint/Kapital/PASHA/MilliKart/Portmanat/m10 route после проверки.", why: "PSP/acquirer, wallets, refunds, payouts и reconciliation добавляются только после legal/KYB, provider confirmation и договоров." },
+  { layer: "Payments MVP", value: "Online payments enabled", note: "В MVP доступны базовые онлайн-платежи через банковские карты, возможно Epoint/Kapital/PASHA/MilliKart/Portmanat/m10.", why: "Остальные способы оплаты подключаются после PMF." },
 ];
 
 export const architectureNotes = [
