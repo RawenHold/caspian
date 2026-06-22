@@ -13,7 +13,7 @@ export function MarketSection() {
       <SectionHeader
         eyebrow="Market opportunity"
         title="Официальные данные подтверждают активный туристический рынок Азербайджана."
-        text="Показываем только публично подтверждённые показатели: прибытия, гостиничные ночи и выручку отелей. Pilot KPI остаются отдельной моделью."
+        text="Показываем только публично подтверждённые показатели: прибытия, гостиничные ночи и выручку отелей."
       />
       <div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-[1fr_1.1fr]">
         <div className="relative min-h-[420px] overflow-hidden rounded-md">
@@ -21,7 +21,7 @@ export function MarketSection() {
           <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />
           <div className="absolute bottom-0 p-6 text-white">
             <p className="text-sm font-semibold uppercase text-white/80">Tourism platform thesis</p>
-            <h3 className="mt-2 text-3xl font-semibold">Concierge-first pilot turns travel discovery into one managed request.</h3>
+            <h3 className="mt-2 text-3xl font-semibold">Пилотный проект упрощает поиск информации о путешествиях до одного запроса..</h3>
           </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
