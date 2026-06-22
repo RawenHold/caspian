@@ -21,7 +21,7 @@ export function MarketSection() {
           <div className="absolute inset-0 bg-gradient-to-t from-ink/70 to-transparent" />
           <div className="absolute bottom-0 p-6 text-white">
             <p className="text-sm font-semibold uppercase text-white/80">Tourism platform thesis</p>
-            <h3 className="mt-2 text-3xl font-semibold">Пилотный проект упрощает поиск информации о путешествиях до одного запроса..</h3>
+            <h3 className="mt-2 text-3xl font-semibold">Пилотный проект упрощает поиск информации о путешествиях до одного запроса.</h3>
           </div>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
