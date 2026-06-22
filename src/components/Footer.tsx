@@ -3,15 +3,15 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-ink px-4 py-12 text-white md:px-8">
-      <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1.1fr_0.7fr_0.9fr]">
+      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
         <div>
           <h2 className="text-2xl font-semibold">Caspian UBook</h2>
           <p className="mt-3 max-w-md text-sm leading-6 text-white/70">
-            Документ для инвесторов и разработчиков travel concierge-платформы в Азербайджане: MVP тестирует спрос, Post-MVP добавляет новые сервисы после подтверждения рынка.
+            Документ для инвесторов и разработчиков AI travel concierge-платформы в Азербайджане: MVP тестирует спрос, Post-MVP добавляет новые сервисы после подтверждения рынка.
           </p>
           <p className="mt-3 max-w-md text-xs leading-5 text-white/45">
             Hero photo: AlixSaz / Wikimedia Commons, CC BY-SA 4.0.
-          </p>
+          </p>        
         </div>
 
         <div>
