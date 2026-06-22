@@ -21,7 +21,7 @@ const quickNavHref: Record<string, string> = {
 
 const developerSectionNav = [
   { href: "#developer-intro", label: "Введение в ТЗ" },
-  { href: "#az-dev-context", label: "AZ Dev Context" },
+  { href: "#az-dev-context", label: "AZ Dev контекст" },
   { href: "#tech-stack", label: "Стек технологий" },
   { href: "#db", label: "Карта данных" },
   { href: "#stages", label: "Этапы реализации" },
@@ -64,9 +64,9 @@ export default function DevelopersPage() {
             <p className="flex items-center gap-2 text-sm font-semibold uppercase text-cobalt">
               <Code2 size={16} /> Для разработчиков
             </p>
-            <h1 className="mt-4 text-4xl font-semibold leading-tight text-ink md:text-6xl">Техническая карта MVP: что строим, что режем и как взять первую задачу.</h1>
+            <h1 className="mt-4 text-4xl font-semibold leading-tight text-ink md:text-6xl">Полная техническая спецификация Caspian UBook MVP.</h1>
             <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-700">
-              Эта страница отвечает на три вопроса: что строим и в каком порядке, что намеренно не входит в MVP, и как разработчику войти в проект без расхождения с инвесторской логикой.
+              Здесь собраны технический стек, архитектурные решения, роли, критерии приёмки и ограничения MVP.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {quickNav.map((item) => (
@@ -142,8 +142,8 @@ export default function DevelopersPage() {
           </div>
           <div className="mt-6 rounded-md border border-red-200 bg-red-50 p-5">
             <p className="text-sm font-semibold uppercase text-red-700">Платежи в MVP</p>
-            <p className="mt-2 text-lg font-semibold text-ink">Только manual payment record. Никакого auto-checkout.</p>
-            <p className="mt-2 text-sm leading-6 text-slate-700">Phase 10 shortlist: Epoint, Kapital Bank, PASHA Bank/acquirer route, MilliKart, Portmanat, m10/Birbank, Apple Pay/Google Pay через поддерживаемого провайдера. Всё после provider verification, legal/KYB и договоров.</p>
+            <p className="mt-2 text-lg font-semibold text-ink">Система автоматически регистрирует и отслеживает платежи.</p>
+            <p className="mt-2 text-sm leading-6 text-slate-700">MVP поддерживает базовые онлайн-платежи через локальных и международных провайдеров, включая банковские карты, в псоледующем Apple Pay и Google Pay.</p>
           </div>
           <div className="mt-6 grid gap-3 md:grid-cols-3">
             {architectureNotes.map((item) => (
@@ -222,13 +222,13 @@ export default function DevelopersPage() {
                 ))}
               </div>
               <p className="mt-4 rounded-md border border-lagoon/25 bg-lagoon/5 p-4 text-sm font-semibold leading-6 text-slate-700">
-                Definition of Done: код в PR, review, тесты зелёные, staging OK, accept.
+                Критерий готовности: код проверен, тесты пройдены, задача соответствует требованиям и принята.
               </p>
             </div>
             <div className="grid gap-4">
               <div className="glass-panel p-5">
                 <h3 className="flex items-center gap-2 text-xl font-semibold text-ink">
-                  <GitPullRequestArrow className="text-cobalt" size={20} /> Definition of Ready
+                  <GitPullRequestArrow className="text-cobalt" size={20} /> Критерий готовности
                 </h3>
                 <div className="mt-4 grid gap-2">
                   {readyChecklist.map((item) => (
