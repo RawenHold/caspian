@@ -5,19 +5,19 @@ const columns = [
   {
     title: "MVP сейчас",
     icon: CheckCircle2,
-    text: "Функционируют заявки на жильё, туры/гиды, трансферы, account, admin/support и AI routing.",
+    text: "Функционируют заявки на жильё, туры/гиды, трансферы, аккаунт пользователя, админ/поддержка и AI маршрутизация.",
     items: ["Manual/semi-auto booking", "Offline payment confirmation", "Analytics для PMF", "Content + SEO foundation"],
   },
   {
-    title: "PMF pilot",
+    title: "PMF пилот",
     icon: Clock3,
-    text: "90 дней данных показывают, какие сервисы переводить в полноценные transactional modules.",
+    text: "90 дней данных показывают, какие сервисы переводить в полноценные рабочие модули.",
     items: ["Internal target: confirmed requests", "Internal target: NPS measured", "CTA demand by section", "Support load analysis"],
   },
   {
-    title: "Full Platform",
+    title: "Полная платформа",
     icon: Layers3,
-    text: "После подтверждения спроса подключаются API, платежи, mobile, Telegram, B2B и loyalty.",
+    text: "После подтверждения спроса подключаются API, платежи, мобильные платформы, Telegram, B2B и лояльность.",
     items: ["OTA / eSIM / insurance API", "Online payments", "Partner dashboards", "Regional platform scale"],
   },
 ];
