@@ -17,56 +17,7 @@ export function PresentationCta({ compact = false }: { compact?: boolean }) {
                 <Sparkles size={14} />
               </span>
             </span>
-
-            <div>
-              <div className="flex flex-wrap items-center gap-3">
-                <h2 className="text-2xl font-semibold leading-tight text-ink md:text-3xl">Для инвестора</h2>
-                <span className="rounded-full border border-cobalt/20 bg-cobalt/5 px-3 py-1 text-sm font-semibold text-cobalt">Seed $520K</span>
-              </div>
-              <p className="mt-4 max-w-sm text-base leading-7 text-slate-600">
-                Связаться с нами для обсуждения MVP проекта.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid gap-3 md:grid-cols-[1fr_1.25fr_1.1fr]">
-            <a href={telegramHref} target="_blank" rel="noreferrer" className="inline-flex min-h-12 items-center justify-center gap-3 whitespace-nowrap rounded-md bg-cobalt px-4 py-3 text-sm font-semibold text-white shadow-glass transition hover:-translate-y-0.5 hover:bg-ink">
-              Связаться <MessageCircle size={18} />
-            </a>
-            <a href={deckHref} download className="inline-flex min-h-12 items-center justify-center gap-3 whitespace-nowrap rounded-md border border-cobalt/20 bg-white px-4 py-3 text-sm font-semibold text-cobalt transition hover:-translate-y-0.5 hover:border-cobalt/35 hover:bg-cobalt/5">
-              Скачать презентацию <Download size={18} />
-            </a>
-            <Link href="/stages" className="inline-flex min-h-12 items-center justify-center gap-3 whitespace-nowrap rounded-md border border-cobalt/20 bg-white px-4 py-3 text-sm font-semibold text-cobalt transition hover:-translate-y-0.5 hover:border-cobalt/35 hover:bg-cobalt/5">
-              Этапы реализации <ArrowRight size={18} />
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-
-
-import Link from "next/link";
-import { ArrowRight, Download, FileText, MessageCircle, Sparkles } from "lucide-react";
-
-const deckHref = "/assets/caspian-ubook-presentation.pdf";
-const telegramHref = "https://t.me/LazDmitriy";
-
-export function PresentationCta({ compact = false }: { compact?: boolean }) {
-  return (
-    <div className={`presentation-cta ${compact ? "p-[1px]" : "p-[2px]"}`}>
-      <div className="relative overflow-hidden rounded-[7px] bg-white/[0.94] p-5 shadow-glass backdrop-blur md:p-7">
-        <div className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-cobalt/50 to-transparent" />
-        <div className="grid gap-5 lg:grid-cols-[1fr_auto] lg:items-center">
-          <div className="flex items-start gap-4">
-            <span className="relative flex h-14 w-14 shrink-0 items-center justify-center rounded-md bg-cobalt text-white shadow-glass">
-              <FileText size={23} />
-              <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-lagoon text-white">
-                <Sparkles size={12} />
-              </span>
-            </span>
+            
             <div>
               <div className="flex flex-wrap items-center gap-2">
                 <p className="text-xl font-semibold text-ink">Для инвестора</p>
